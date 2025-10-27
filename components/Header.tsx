@@ -24,9 +24,14 @@ export default function Header() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between px-3 py-6">
             <div className="flex items-center">
-              <span className="text-3xl font-black text-white tracking-tight italic">
-                Ashentrix
-              </span>
+              <div className="flex flex-col">
+                <span className="text-3xl font-black text-white tracking-tight italic">
+                  Ashentrix
+                </span>
+                <span className="text-xs text-gray-400 font-medium tracking-wide">
+                  Headquarters: Sec 15 Noida India
+                </span>
+              </div>
             </div>
 
             <nav className="hidden lg:flex items-center gap-10 text-sm font-medium">
@@ -165,7 +170,7 @@ export default function Header() {
 
             <a
               href="#contact"
-              className="bg-[#280b57] text-white px-8 py-3 text-sm font-semibold hover:bg-[#1f0944] transition-all uppercase tracking-wider border-2 border-[#280b57] hover:border-[#1f0944] rounded-lg"
+              className="bg-[#280b57] text-white px-8 py-3 text-sm font-semibold hover:bg-[#1f0944] transition-all uppercase tracking-wider border-2 border-[#280b57] hover:border-[#1f0944]"
             >
               Contact Us
             </a>

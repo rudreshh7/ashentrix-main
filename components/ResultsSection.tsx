@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
@@ -66,7 +66,7 @@ const StatCard = ({
   return (
     <div
       ref={cardRef}
-      className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+      className="group relative bg-white  overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
       style={{
         animation: isVisible
           ? `fadeInUp 0.6s ease-out ${index * 0.15}s both`
@@ -100,7 +100,7 @@ const StatCard = ({
       <div className="p-6 bg-gradient-to-br from-white to-gray-50">
         <div className="flex items-start gap-4">
           <div className="flex-shrink-0">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#280b57] to-[#1f0944] flex items-center justify-center">
+            <div className="w-12 h-12  bg-gradient-to-br from-[#280b57] to-[#1f0944] flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-white"
                 fill="none"
@@ -202,7 +202,7 @@ export default function ResultsSection() {
           {/* Header */}
           <div className="text-center mb-20">
             <div className="inline-block mb-6">
-              <span className="text-sm font-bold text-[#280b57] uppercase tracking-wider bg-[#280b57]/20 px-4 py-2 rounded-full border border-[#280b57]/30">
+              <span className="text-sm font-bold text-[#280b57] uppercase tracking-wider bg-[#280b57]/20 px-4 py-2  border border-[#280b57]/30">
                 Impact That Matters
               </span>
             </div>
@@ -224,7 +224,7 @@ export default function ResultsSection() {
           </div>
 
           {/* Bottom Stats Bar */}
-          <div className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8">
+          <div className="bg-white/5 backdrop-blur-md  border border-white/10 p-8">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-4xl font-black text-white mb-2">500+</div>

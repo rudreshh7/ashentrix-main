@@ -46,10 +46,10 @@ export default function ContactSection() {
           {/* Left Side - Contact Info */}
           <div className="space-y-6">
             {/* Contact Cards */}
-            <div className="bg-gray-50 rounded-xl border border-gray-200 p-6 hover:shadow-md transition-all duration-300">
+            <div className="bg-gray-50  border border-gray-300 p-8 hover:shadow-sm transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
-                  <div className="w-12 h-12 rounded-lg bg-gray-900 flex items-center justify-center">
+                  <div className="w-12 h-12  bg-gray-900 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -82,10 +82,10 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl border border-gray-200 p-6 hover:shadow-md transition-all duration-300">
+            <div className="bg-gray-50  border border-gray-300 p-8 hover:shadow-sm transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
-                  <div className="w-12 h-12 rounded-lg bg-gray-900 flex items-center justify-center">
+                  <div className="w-12 h-12  bg-gray-900 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -118,10 +118,10 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl border border-gray-200 p-6 hover:shadow-md transition-all duration-300">
+            <div className="bg-gray-50  border border-gray-300 p-8 hover:shadow-sm transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
-                  <div className="w-12 h-12 rounded-lg bg-gray-900 flex items-center justify-center">
+                  <div className="w-12 h-12  bg-gray-900 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -160,7 +160,7 @@ export default function ContactSection() {
             </div>
 
             {/* Decorative Image */}
-            <div className="relative rounded-xl overflow-hidden h-48 hidden lg:block">
+            <div className="relative  overflow-hidden h-48 hidden lg:block">
               <Image
                 src="/images/pro2.jpg"
                 alt="Contact Us"
@@ -177,7 +177,7 @@ export default function ContactSection() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gray-50 rounded-xl border border-gray-200 p-6 shadow-sm">
+          <div className="bg-gray-50  border border-gray-300 p-8 shadow-sm">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -196,7 +196,7 @@ export default function ContactSection() {
                       focusedField === "name"
                         ? "border-gray-900"
                         : "border-gray-300"
-                    } rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
+                    }  focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
                     placeholder="John Doe"
                   />
                 </div>
@@ -216,7 +216,7 @@ export default function ContactSection() {
                       focusedField === "email"
                         ? "border-gray-900"
                         : "border-gray-300"
-                    } rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
+                    }  focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
                     placeholder="john@company.com"
                   />
                 </div>
@@ -239,7 +239,7 @@ export default function ContactSection() {
                       focusedField === "company"
                         ? "border-gray-900"
                         : "border-gray-300"
-                    } rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
+                    }  focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
                     placeholder="Your Company Inc."
                   />
                 </div>
@@ -258,7 +258,7 @@ export default function ContactSection() {
                       focusedField === "phone"
                         ? "border-gray-900"
                         : "border-gray-300"
-                    } rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
+                    }  focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
                     placeholder="+1 (234) 567-890"
                   />
                 </div>
@@ -279,7 +279,7 @@ export default function ContactSection() {
                     focusedField === "service"
                       ? "border-gray-900"
                       : "border-gray-300"
-                  } rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 transition-all duration-300`}
+                  }  focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 transition-all duration-300`}
                 >
                   <option value="">Select a service...</option>
                   <option value="customer-support">Customer Support</option>
@@ -307,14 +307,14 @@ export default function ContactSection() {
                     focusedField === "message"
                       ? "border-gray-900"
                       : "border-gray-300"
-                  } rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 resize-none transition-all duration-300`}
+                  }  focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 resize-none transition-all duration-300`}
                   placeholder="Tell us about your project, timeline, and goals..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 flex items-center justify-center gap-2 group"
+                className="w-full bg-gray-900 text-white py-3  font-semibold hover:bg-gray-800 transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 Send Message
                 <svg

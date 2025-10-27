@@ -16,7 +16,7 @@ const ContentCard = ({ type, title, image, gradient }: ContentCardProps) => {
 
   return (
     <div
-      className="relative overflow-hidden rounded-lg cursor-pointer group h-96"
+      className="relative overflow-hidden  cursor-pointer group h-96"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -78,7 +78,7 @@ const ContentCard = ({ type, title, image, gradient }: ContentCardProps) => {
       </div>
 
       {/* Animated Border */}
-      <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/20 transition-all duration-300 rounded-lg" />
+      <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/20 transition-all duration-300 " />
     </div>
   );
 };

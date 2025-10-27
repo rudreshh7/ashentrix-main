@@ -4,13 +4,15 @@ export default function ServicesSection() {
   return (
     <section id="services" className="max-w-7xl mx-auto px-8 py-20">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-[#0F172A] mb-4">Our Services</h2>
+        <h2 className="text-4xl font-semibold text-[#0F172A] mb-4 tracking-tight">
+          Our Services
+        </h2>
         <p className="text-lg text-[#475569] max-w-2xl mx-auto">
           Comprehensive outsourcing solutions tailored to your business needs
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#280b57] transition-all hover:shadow-lg">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
               src="/images/pro2.jpg"
@@ -21,7 +23,7 @@ export default function ServicesSection() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-bold text-[#0F172A] mb-2">
+            <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
               Customer Support Outsourcing
             </h3>
             <p className="text-sm text-[#475569]">
@@ -29,7 +31,7 @@ export default function ServicesSection() {
             </p>
           </div>
         </div>
-        <div className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#280b57] transition-all hover:shadow-lg">
+        <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
               src="/images/pro3.jpg"
@@ -40,7 +42,7 @@ export default function ServicesSection() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-bold text-[#0F172A] mb-2">
+            <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
               Process & Back-office Automation
             </h3>
             <p className="text-sm text-[#475569]">
@@ -48,7 +50,7 @@ export default function ServicesSection() {
             </p>
           </div>
         </div>
-        <div className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#280b57] transition-all hover:shadow-lg">
+        <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
               src="/images/pro1.jpg"
@@ -59,7 +61,7 @@ export default function ServicesSection() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-bold text-[#0F172A] mb-2">
+            <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
               Data Entry & Digital Ops
             </h3>
             <p className="text-sm text-[#475569]">
@@ -67,7 +69,7 @@ export default function ServicesSection() {
             </p>
           </div>
         </div>
-        <div className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#280b57] transition-all hover:shadow-lg">
+        <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
               src="/images/pro2.jpg"
@@ -78,7 +80,7 @@ export default function ServicesSection() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-bold text-[#280b57] mb-2">
+            <h3 className="text-lg font-semibold text-[#280b57] mb-3 tracking-tight">
               CX Consulting
             </h3>
             <p className="text-sm text-[#475569]">

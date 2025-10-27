@@ -13,7 +13,7 @@ const IndustryCard = ({ title, image }: IndustryCardProps) => {
 
   return (
     <div
-      className="relative overflow-hidden rounded-lg cursor-pointer group h-96"
+      className="relative overflow-hidden  cursor-pointer group h-96"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -44,7 +44,7 @@ const IndustryCard = ({ title, image }: IndustryCardProps) => {
       </div>
 
       {/* Animated Border */}
-      <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/30 transition-all duration-300 rounded-lg" />
+      <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/30 transition-all duration-300 " />
     </div>
   );
 };
@@ -54,9 +54,7 @@ export default function IndustriesSection() {
     { title: "Banking & Finance", image: "/images/pro1.jpg" },
     { title: "Manufacturing", image: "/images/pro2.jpg" },
     { title: "Insurance", image: "/images/pro3.jpg" },
-    { title: "Retail & E-commerce", image: "/images/pro4.jpg" },
-    { title: "Technology & SaaS", image: "/images/pro5.jpg" },
-    { title: "Logistics & Supply Chain", image: "/images/pro1.jpg" },
+    { title: "Technology & SaaS", image: "/images/pro4.jpg" },
   ];
 
   return (
@@ -69,13 +67,15 @@ export default function IndustriesSection() {
           </p>
         </div>
 
-        {/* Industry Cards Grid - Single Row Horizontal Scroll */}
-        <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide">
-          {industries.map((industry, index) => (
-            <div key={index} className="flex-shrink-0 w-64">
-              <IndustryCard title={industry.title} image={industry.image} />
-            </div>
-          ))}
+        {/* Industry Cards Grid - Centered Layout */}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl">
+            {industries.map((industry, index) => (
+              <div key={index} className="w-64">
+                <IndustryCard title={industry.title} image={industry.image} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

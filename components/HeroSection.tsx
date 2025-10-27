@@ -26,13 +26,13 @@ export default function HeroSection() {
             <div className="flex gap-4">
               <a
                 href="#contact"
-                className="bg-[#280b57] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1f0944] transition-colors inline-block"
+                className="bg-[#280b57] text-white px-10 py-4 font-semibold hover:bg-[#1f0944] transition-colors inline-block tracking-tight"
               >
                 Get Started
               </a>
               <a
                 href="#services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#280b57] transition-colors inline-block"
+                className="border-2 border-white text-white px-10 py-4 font-semibold hover:bg-white hover:text-[#280b57] transition-colors inline-block tracking-tight"
               >
                 Explore Services
               </a>

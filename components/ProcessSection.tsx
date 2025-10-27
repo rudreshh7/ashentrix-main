@@ -129,7 +129,7 @@ export default function ProcessSection() {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-block mb-4">
-            <span className="text-sm font-bold text-[#280b57] uppercase tracking-wider bg-[#280b57]/10 px-4 py-2 rounded-full">
+            <span className="text-sm font-bold text-[#280b57] uppercase tracking-wider bg-[#280b57]/10 px-4 py-2">
               Our Process
             </span>
           </div>
@@ -158,18 +158,18 @@ export default function ProcessSection() {
               onMouseLeave={() => setActiveStep(null)}
             >
               <div
-                className={`bg-white rounded-2xl p-8 shadow-lg border-2 transition-all duration-300 h-full ${
+                className={`bg-white p-10 shadow-sm border-2 transition-all duration-300 h-full ${
                   activeStep === index
-                    ? "border-[#280b57] shadow-2xl transform -translate-y-2"
-                    : "border-gray-100 hover:border-[#280b57]/50"
+                    ? "border-[#280b57] shadow-md transform -translate-y-1"
+                    : "border-gray-200 hover:border-[#280b57]/50"
                 }`}
               >
                 {/* Step Number Badge */}
                 <div className="relative mb-6">
                   <div
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white text-2xl font-black transition-all duration-300 ${
+                    className={`w-16 h-16 flex items-center justify-center text-white text-2xl font-bold transition-all duration-300 ${
                       activeStep === index
-                        ? "bg-gradient-to-br from-[#280b57] to-[#1f0944] shadow-lg"
+                        ? "bg-[#280b57] shadow-sm"
                         : step.number % 2 === 0
                         ? "bg-[#280b57]"
                         : "bg-[#1f0944]"
@@ -239,7 +239,7 @@ export default function ProcessSection() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-[#280b57] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1f0944] transition-all shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-[#280b57] text-white px-10 py-4 font-semibold hover:bg-[#1f0944] transition-all shadow-sm hover:shadow-md tracking-tight"
           >
             Start Your Journey
             <svg

@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
+                className="w-12 h-12 bg-gray-700  flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
               >
                 <svg
                   className="w-5 h-5"
@@ -52,7 +52,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
+                className="w-12 h-12 bg-gray-700  flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
               >
                 <svg
                   className="w-5 h-5"
@@ -64,7 +64,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
+                className="w-12 h-12 bg-gray-700  flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
               >
                 <svg
                   className="w-5 h-5"
@@ -76,7 +76,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
+                className="w-12 h-12 bg-gray-700  flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
               >
                 <svg
                   className="w-5 h-5"
@@ -99,9 +99,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[#280b57] text-white placeholder-gray-500"
+                className="flex-1 px-6 py-4 bg-gray-800 border border-gray-700  focus:outline-none focus:border-[#280b57] text-white placeholder-gray-500"
               />
-              <button className="bg-[#280b57] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1f0944] transition-all whitespace-nowrap">
+              <button className="bg-[#280b57] text-white px-8 py-4  font-semibold hover:bg-[#1f0944] transition-all whitespace-nowrap">
                 Subscribe
               </button>
             </form>
@@ -509,7 +509,7 @@ export default function Footer() {
 
               {/* Language Dropdown */}
               {isFooterLangOpen && (
-                <div className="absolute bottom-full right-0 mb-2 bg-[#004D66] text-white rounded-lg shadow-xl overflow-hidden w-48 z-50">
+                <div className="absolute bottom-full right-0 mb-2 bg-[#004D66] text-white  shadow-xl overflow-hidden w-48 z-50">
                   <button
                     onClick={() => changeLanguage("en")}
                     className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors text-[#38BDF8]"
