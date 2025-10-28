@@ -13,33 +13,37 @@ interface Testimonial {
 export default function TestimonialsSection() {
   const testimonials: Testimonial[] = [
     {
-      quote: "Ashentrix transformed our operations with their intelligent automation solutions. We saw 40% efficiency improvement within the first quarter.",
+      quote:
+        "Ashentrix transformed our operations with their intelligent automation solutions. We saw 40% efficiency improvement within the first quarter.",
       author: "Sarah Johnson",
       position: "Chief Operations Officer",
       company: "TechCorp Industries",
-      industry: "Technology"
+      industry: "Technology",
     },
     {
-      quote: "Their strategic approach to process optimization helped us reduce costs by 35% while improving service quality. Exceptional partnership.",
+      quote:
+        "Their strategic approach to process optimization helped us reduce costs by 35% while improving service quality. Exceptional partnership.",
       author: "Michael Chen",
       position: "VP Operations",
       company: "Global Manufacturing Ltd",
-      industry: "Manufacturing"
+      industry: "Manufacturing",
     },
     {
-      quote: "The team's expertise in financial services automation is unmatched. They delivered complex solutions on time and under budget.",
+      quote:
+        "The team's expertise in financial services automation is unmatched. They delivered complex solutions on time and under budget.",
       author: "Emily Rodriguez",
       position: "Director of Digital Transformation",
       company: "Premier Bank",
-      industry: "Banking"
+      industry: "Banking",
     },
     {
-      quote: "Ashentrix's outsourcing solutions allowed us to focus on core business growth while maintaining operational excellence.",
+      quote:
+        "Ashentrix's outsourcing solutions allowed us to focus on core business growth while maintaining operational excellence.",
       author: "David Thompson",
       position: "CEO",
       company: "InnovateTech Solutions",
-      industry: "Technology"
-    }
+      industry: "Technology",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,7 +53,9 @@ export default function TestimonialsSection() {
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   return (
@@ -60,7 +66,8 @@ export default function TestimonialsSection() {
             Client Success Stories
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Hear from industry leaders who have transformed their operations with Ashentrix
+            Hear from industry leaders who have transformed their operations
+            with Ashentrix
           </p>
         </div>
 
@@ -68,8 +75,12 @@ export default function TestimonialsSection() {
           <div className="text-center">
             {/* Quote Icon */}
             <div className="mb-8">
-              <svg className="w-12 h-12 mx-auto text-[#280b57]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+              <svg
+                className="w-12 h-12 mx-auto text-[#280b57]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
               </svg>
             </div>
 
@@ -87,7 +98,8 @@ export default function TestimonialsSection() {
                 {testimonials[currentIndex].position}
               </p>
               <p className="text-gray-600">
-                {testimonials[currentIndex].company} • {testimonials[currentIndex].industry}
+                {testimonials[currentIndex].company} •{" "}
+                {testimonials[currentIndex].industry}
               </p>
             </div>
 
@@ -97,8 +109,18 @@ export default function TestimonialsSection() {
                 onClick={prevTestimonial}
                 className="w-12 h-12 flex items-center justify-center bg-[#280b57] text-white hover:bg-[#280b57]/90 transition-colors"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
               </button>
 
@@ -109,7 +131,7 @@ export default function TestimonialsSection() {
                     key={index}
                     onClick={() => setCurrentIndex(index)}
                     className={`w-3 h-3 transition-colors ${
-                      index === currentIndex ? 'bg-[#280b57]' : 'bg-gray-300'
+                      index === currentIndex ? "bg-[#280b57]" : "bg-gray-300"
                     }`}
                   />
                 ))}
@@ -119,8 +141,18 @@ export default function TestimonialsSection() {
                 onClick={nextTestimonial}
                 className="w-12 h-12 flex items-center justify-center bg-[#280b57] text-white hover:bg-[#280b57]/90 transition-colors"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </div>
