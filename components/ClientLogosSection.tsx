@@ -1,13 +1,46 @@
+import {
+  Shield,
+  Heart,
+  Radio,
+  ShoppingCart,
+  DollarSign,
+  Truck,
+  Plane,
+  Film,
+  Computer,
+} from "lucide-react";
+
 export default function ClientLogosSection() {
-  const clients = [
-    { name: "TechCorp Industries", logo: "TC", industry: "Technology" },
-    { name: "Global Manufacturing Ltd", logo: "GM", industry: "Manufacturing" },
-    { name: "Premier Bank", logo: "PB", industry: "Banking" },
-    { name: "InnovateTech Solutions", logo: "IT", industry: "Technology" },
-    { name: "SecureFinance Group", logo: "SF", industry: "Finance" },
-    { name: "NextGen Logistics", logo: "NL", industry: "Logistics" },
-    { name: "HealthCore Systems", logo: "HC", industry: "Healthcare" },
-    { name: "RetailMax Corporation", logo: "RM", industry: "Retail" },
+  const industries = [
+    { name: "Insurance Partnership", icon: Shield, industry: "Insurance" },
+    { name: "Healthcare Solutions", icon: Heart, industry: "Healthcare" },
+    { name: "Telecom Services", icon: Radio, industry: "Telecom" },
+    { name: "E-commerce Growth", icon: ShoppingCart, industry: "E-commerce" },
+    {
+      name: "Finance & Accounting",
+      icon: DollarSign,
+      industry: "Finance & Accounting",
+    },
+    {
+      name: "Logistics & Supply Chain",
+      icon: Truck,
+      industry: "Logistics & Supply Chain",
+    },
+    {
+      name: "Travel & Hospitality",
+      icon: Plane,
+      industry: "Travel, Hospitality & Cargo",
+    },
+    {
+      name: "Entertainment & Social",
+      icon: Film,
+      industry: "Entertainment & Social Platforms",
+    },
+    {
+      name: "IT, Hardware & IoT",
+      icon: Computer,
+      industry: "IT, Hardware & IoT",
+    },
   ];
 
   return (
@@ -15,27 +48,29 @@ export default function ClientLogosSection() {
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
-            Trusted by Industry Leaders
+            Ready for New Partnerships
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We partner with forward-thinking organizations across industries to
-            drive operational excellence and sustainable growth
+            We&apos;re excited to partner with forward-thinking organizations
+            across industries to drive operational excellence and sustainable
+            growth
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
-          {clients.map((client, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-9 gap-6 items-center opacity-70">
+          {industries.map((industry, index) => (
             <div
               key={index}
               className="flex flex-col items-center group cursor-pointer"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300 flex items-center justify-center mb-3 group-hover:from-[#280b57]/10 group-hover:to-[#280b57]/20 group-hover:border-[#280b57]/30 transition-all duration-300">
-                <span className="text-lg font-bold text-gray-600 group-hover:text-[#280b57] transition-colors">
-                  {client.logo}
-                </span>
+              <div className="w-16 h-16 bg-linear-to-br from-gray-100 to-gray-200 border border-gray-300 flex items-center justify-center mb-3 group-hover:from-[#280b57]/10 group-hover:to-[#280b57]/20 group-hover:border-[#280b57]/30 transition-all duration-300 rounded-lg">
+                <industry.icon
+                  size={24}
+                  className="text-gray-600 group-hover:text-[#280b57] group-hover:scale-110 transition-all duration-300"
+                />
               </div>
-              <p className="text-xs text-gray-500 text-center font-medium">
-                {client.industry}
+              <p className="text-xs text-gray-500 text-center font-medium leading-tight">
+                {industry.industry}
               </p>
             </div>
           ))}
@@ -43,8 +78,7 @@ export default function ClientLogosSection() {
 
         <div className="text-center mt-12">
           <p className="text-gray-500 text-sm mb-4">
-            Join 200+ companies that trust Ashentrix for their operational
-            transformation
+            Target industries for partnerships - Building our client base
           </p>
           <div className="flex justify-center items-center gap-4 text-xs text-gray-400">
             <span className="flex items-center gap-1">
@@ -55,7 +89,7 @@ export default function ClientLogosSection() {
                   clipRule="evenodd"
                 />
               </svg>
-              ISO 27001 Certified
+              Compliance Ready
             </span>
             <span>•</span>
             <span className="flex items-center gap-1">
@@ -66,10 +100,10 @@ export default function ClientLogosSection() {
                   clipRule="evenodd"
                 />
               </svg>
-              SOC 2 Type II Compliant
+              Security Focused
             </span>
             <span>•</span>
-            <span>99.9% Uptime SLA</span>
+            <span>Growth Oriented</span>
           </div>
         </div>
       </div>

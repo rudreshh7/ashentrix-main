@@ -7,11 +7,14 @@ export default function ServicesSection() {
         <h2 className="text-4xl font-semibold text-[#0F172A] mb-4 tracking-tight">
           Our Services
         </h2>
-        <p className="text-lg text-[#475569] max-w-2xl mx-auto">
-          Comprehensive outsourcing solutions tailored to your business needs
+        <p className="text-lg text-[#475569] max-w-3xl mx-auto">
+          At Ashentrix Solutions, we combine advanced technology with human
+          expertise to deliver scalable, multilingual, and industry-ready
+          outsourcing solutions designed to adapt to your business goals,
+          enhance customer engagement, and create measurable long-term value.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
@@ -24,10 +27,11 @@ export default function ServicesSection() {
           </div>
           <div className="p-6">
             <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
-              Customer Support Outsourcing
+              Customer Support (Voice / Chat / Email)
             </h3>
             <p className="text-sm text-[#475569]">
-              24/7 multi-channel support delivered with excellence
+              Personalized, multilingual assistance to enhance customer
+              satisfaction and retention
             </p>
           </div>
         </div>
@@ -35,7 +39,7 @@ export default function ServicesSection() {
           <div className="relative w-full h-40">
             <Image
               src="/images/pro3.jpg"
-              alt="Process Automation"
+              alt="Technical Support"
               width={300}
               height={200}
               className="w-full h-full object-cover"
@@ -43,10 +47,11 @@ export default function ServicesSection() {
           </div>
           <div className="p-6">
             <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
-              Process & Back-office Automation
+              Technical Support
             </h3>
             <p className="text-sm text-[#475569]">
-              Streamline operations with intelligent automation
+              End-to-end troubleshooting and product support powered by skilled
+              professionals
             </p>
           </div>
         </div>
@@ -54,7 +59,7 @@ export default function ServicesSection() {
           <div className="relative w-full h-40">
             <Image
               src="/images/pro1.jpg"
-              alt="Data Entry"
+              alt="Back Office Operations"
               width={300}
               height={200}
               className="w-full h-full object-cover"
@@ -62,10 +67,51 @@ export default function ServicesSection() {
           </div>
           <div className="p-6">
             <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
-              Data Entry & Digital Ops
+              Back Office Operations
             </h3>
             <p className="text-sm text-[#475569]">
-              Accurate, efficient digital operations management
+              Streamlined processing and documentation services for improved
+              efficiency
+            </p>
+          </div>
+        </div>
+        <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
+          <div className="relative w-full h-40">
+            <Image
+              src="/images/pro4.jpg"
+              alt="Data Processing"
+              width={300}
+              height={200}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
+              Data Processing & Data Services
+            </h3>
+            <p className="text-sm text-[#475569]">
+              Secure data management and transformation for business
+              intelligence
+            </p>
+          </div>
+        </div>
+        <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
+          <div className="relative w-full h-40">
+            <Image
+              src="/images/pro1.jpg"
+              alt="Analytics & Reporting"
+              width={300}
+              height={200}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
+              Analytics & Reporting
+            </h3>
+            <p className="text-sm text-[#475569]">
+              Actionable insights through real-time data monitoring and
+              performance analysis
             </p>
           </div>
         </div>
@@ -73,7 +119,47 @@ export default function ServicesSection() {
           <div className="relative w-full h-40">
             <Image
               src="/images/pro2.jpg"
-              alt="CX Consulting"
+              alt="Collections Process"
+              width={300}
+              height={200}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
+              Collections Process
+            </h3>
+            <p className="text-sm text-[#475569]">
+              Efficient, compliant, and customer-friendly debt recovery
+              solutions
+            </p>
+          </div>
+        </div>
+        <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
+          <div className="relative w-full h-40">
+            <Image
+              src="/images/pro3.jpg"
+              alt="Recruitment Support"
+              width={300}
+              height={200}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-[#0F172A] mb-3 tracking-tight">
+              Recruitment & Talent Support
+            </h3>
+            <p className="text-sm text-[#475569]">
+              Scalable hiring solutions to meet your workforce and project
+              demands
+            </p>
+          </div>
+        </div>
+        <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
+          <div className="relative w-full h-40">
+            <Image
+              src="/images/pro4.jpg"
+              alt="Operations Management"
               width={300}
               height={200}
               className="w-full h-full object-cover"
@@ -81,10 +167,11 @@ export default function ServicesSection() {
           </div>
           <div className="p-6">
             <h3 className="text-lg font-semibold text-[#280b57] mb-3 tracking-tight">
-              CX Consulting
+              Operations Management
             </h3>
             <p className="text-sm text-[#475569]">
-              Strategic guidance for exceptional customer experiences
+              Process optimization and workflow monitoring for consistent
+              results
             </p>
           </div>
         </div>

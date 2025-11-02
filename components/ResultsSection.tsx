@@ -146,7 +146,7 @@ export default function ResultsSection() {
       suffix: "%",
       label: "Faster Response Time",
       description:
-        "Achieved 45% reduction in average response time for a Fortune 500 telecommunications client through process optimization and AI-powered automation.",
+        "Ready to achieve significant improvements in response times through process optimization and AI-powered automation for your business.",
       image: "/images/pro3.jpg",
     },
     {
@@ -154,7 +154,7 @@ export default function ResultsSection() {
       suffix: "+",
       label: "Hours Saved Monthly",
       description:
-        "Delivered over 1,200 hours of operational savings per month through intelligent automation and workflow optimization for enterprise clients.",
+        "Equipped to deliver substantial operational savings through intelligent automation and workflow optimization for enterprise clients.",
       image: "/images/pro1.jpg",
     },
     {
@@ -227,27 +227,27 @@ export default function ResultsSection() {
           <div className="bg-white/5 backdrop-blur-md  border border-white/10 p-8">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-black text-white mb-2">500+</div>
+                <div className="text-4xl font-black text-white mb-2">2025</div>
                 <div className="text-gray-400 text-sm uppercase tracking-wider">
-                  Projects Delivered
+                  Launch Year
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-black text-white mb-2">98%</div>
+                <div className="text-4xl font-black text-white mb-2">100%</div>
                 <div className="text-gray-400 text-sm uppercase tracking-wider">
-                  Client Satisfaction
+                  Commitment Level
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-black text-white mb-2">150+</div>
+                <div className="text-4xl font-black text-white mb-2">Fresh</div>
                 <div className="text-gray-400 text-sm uppercase tracking-wider">
-                  Enterprise Clients
+                  Perspective
                 </div>
               </div>
               <div>
                 <div className="text-4xl font-black text-white mb-2">24/7</div>
                 <div className="text-gray-400 text-sm uppercase tracking-wider">
-                  Global Support
+                  Dedication
                 </div>
               </div>
             </div>

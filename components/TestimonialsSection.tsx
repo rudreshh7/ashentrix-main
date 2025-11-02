@@ -14,35 +14,35 @@ export default function TestimonialsSection() {
   const testimonials: Testimonial[] = [
     {
       quote:
-        "Ashentrix transformed our operations with their intelligent automation solutions. We saw 40% efficiency improvement within the first quarter.",
-      author: "Sarah Johnson",
-      position: "Chief Operations Officer",
-      company: "TechCorp Industries",
-      industry: "Technology",
+        "Ready to transform operations with intelligent automation solutions. Target: 40% efficiency improvement in the first quarter.",
+      author: "Your Company",
+      position: "Future Partnership",
+      company: "Next Success Story",
+      industry: "Any Industry",
     },
     {
       quote:
-        "Their strategic approach to process optimization helped us reduce costs by 35% while improving service quality. Exceptional partnership.",
-      author: "Michael Chen",
-      position: "VP Operations",
-      company: "Global Manufacturing Ltd",
-      industry: "Manufacturing",
+        "Seeking strategic approach to process optimization with goals of 35% cost reduction while improving service quality.",
+      author: "Your Team",
+      position: "Partnership Opportunity",
+      company: "Growth-Focused Organization",
+      industry: "All Sectors",
     },
     {
       quote:
-        "The team's expertise in financial services automation is unmatched. They delivered complex solutions on time and under budget.",
-      author: "Emily Rodriguez",
-      position: "Director of Digital Transformation",
-      company: "Premier Bank",
-      industry: "Banking",
+        "Looking for expertise in business automation. Committed to delivering complex solutions on time and under budget.",
+      author: "Your Organization",
+      position: "Potential Partnership",
+      company: "Forward-Thinking Business",
+      industry: "Any Field",
     },
     {
       quote:
-        "Ashentrix's outsourcing solutions allowed us to focus on core business growth while maintaining operational excellence.",
-      author: "David Thompson",
-      position: "CEO",
-      company: "InnovateTech Solutions",
-      industry: "Technology",
+        "Ready to provide outsourcing solutions that allow you to focus on core business growth while maintaining operational excellence.",
+      author: "Ashentrix Team",
+      position: "Our Promise",
+      company: "Ashentrix Solutions",
+      industry: "Partnership Ready",
     },
   ];
 
@@ -63,11 +63,11 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-semibold text-gray-900 mb-4 tracking-tight">
-            Client Success Stories
+            Partnership Vision
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Hear from industry leaders who have transformed their operations
-            with Ashentrix
+            Ready to build the success stories of tomorrow with forward-thinking
+            organizations
           </p>
         </div>
 

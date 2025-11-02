@@ -151,9 +151,9 @@ export default function ContactSection() {
                     Come say hello at our office
                   </p>
                   <p className="text-gray-900 text-sm">
-                    123 Business Avenue
+                    Delhi NCR
                     <br />
-                    Suite 500, New York, NY 10001
+                    India
                   </p>
                 </div>
               </div>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -10,9 +12,10 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ashentrix - Transforming Operations, Empowering Growth",
+  title:
+    "Ashentrix Solutions - Professional Outsourcing & Business Process Management",
   description:
-    "Ashentrix helps businesses streamline their processes with intelligent outsourcing and automation — designed for the modern enterprise.",
+    "Ashentrix Solutions, based in Delhi NCR, India, provides professional outsourcing and business process management services to global enterprises across Insurance, Telecom, Healthcare, Finance, and more industries.",
 };
 
 export default function RootLayout({
@@ -24,7 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${ibmPlexSans.variable} font-sans antialiased`}>
         <div id="google_translate_element"></div>
+        <Header />
         {children}
+        <Footer />
 
         <Script
           id="google-translate-init"

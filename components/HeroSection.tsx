@@ -20,8 +20,10 @@ export default function HeroSection() {
               <span className="text-white">Empowering Growth.</span>
             </h1>
             <p className="text-lg text-white leading-relaxed mb-8">
-              Ashentrix helps businesses streamline their processes with
-              intelligent outsourcing and automation.
+              Professional outsourcing and business process management solutions
+              from Delhi NCR, serving global enterprises across Insurance,
+              Telecom, Healthcare, Finance, and more with end-to-end customer
+              support and back-office operations.
             </p>
             <div className="flex gap-4">
               <a

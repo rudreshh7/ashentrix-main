@@ -1,49 +1,40 @@
 ﻿"use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-
-  const changeLanguage = (langCode: string) => {
-    // Use the global function from layout
-    if (typeof window !== "undefined" && (window as any).changeGoogleLanguage) {
-      (window as any).changeGoogleLanguage(langCode);
-      setIsLanguageOpen(false);
-    } else {
-      // Fallback if window function not ready yet
-      setTimeout(() => changeLanguage(langCode), 200);
-    }
-  };
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <>
-      <header className="bg-[#1a1625] border-b border-[#280b57]/30 sticky top-0 z-50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between px-3 py-6">
+    <div className="relative">
+      <header className="bg-black border-b border-gray-800 sticky top-0 z-50">
+        <div className="max-w-full mx-auto">
+          <div className="flex items-center justify-between px-6 py-4">
+            {/* Logo Section */}
             <div className="flex items-center">
-              <div className="flex flex-col">
-                <span className="text-3xl font-black text-white tracking-tight italic">
-                  Ashentrix
-                </span>
-                <span className="text-xs text-gray-400 font-medium tracking-wide">
-                  Headquarters: Sec 15 Noida India
-                </span>
-              </div>
+              <Link href="/" className="flex items-center gap-3">
+                <div className="bg-white px-3 py-1 rounded">
+                  <span className="text-xl font-black text-black tracking-tight">
+                    ASHENTRIX
+                  </span>
+                </div>
+              </Link>
             </div>
 
-            <nav className="hidden lg:flex items-center gap-10 text-sm font-medium">
+            {/* Main Navigation */}
+            <nav className="hidden lg:flex items-center gap-0 text-sm font-medium">
+              {/* Services */}
               <div
                 className="relative"
-                onMouseEnter={() => setActiveMenu("who-we-are")}
-                onMouseLeave={() => setActiveMenu(null)}
+                onMouseEnter={() => setActiveDropdown("solutions")}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="text-gray-300 hover:text-white transition-colors uppercase tracking-wide flex items-center gap-1 py-2">
-                  Who We Are
+                <button className="text-gray-300 hover:text-white hover:bg-gray-800 transition-all px-4 py-3 flex items-center gap-1">
+                  Services
                   <svg
-                    className="w-4 h-4"
+                    className="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -58,15 +49,16 @@ export default function Header() {
                 </button>
               </div>
 
+              {/* Insights */}
               <div
                 className="relative"
-                onMouseEnter={() => setActiveMenu("what-we-do")}
-                onMouseLeave={() => setActiveMenu(null)}
+                onMouseEnter={() => setActiveDropdown("insights")}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="text-gray-300 hover:text-white transition-colors uppercase tracking-wide flex items-center gap-1 py-2">
-                  What We Do
+                <button className="text-gray-300 hover:text-white hover:bg-gray-800 transition-all px-4 py-3 flex items-center gap-1">
+                  Insights
                   <svg
-                    className="w-4 h-4"
+                    className="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -81,42 +73,16 @@ export default function Header() {
                 </button>
               </div>
 
-              <a
-                href="#thinking"
-                className="text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
-              >
-                Our Thinking
-              </a>
-              <a
-                href="#case-studies"
-                className="text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
-              >
-                Case Studies
-              </a>
-
-              {/* Language Selector */}
+              {/* Industries */}
               <div
                 className="relative"
-                onMouseEnter={() => setIsLanguageOpen(true)}
-                onMouseLeave={() => setIsLanguageOpen(false)}
+                onMouseEnter={() => setActiveDropdown("industries")}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="text-gray-300 hover:text-white transition-colors uppercase tracking-wide flex items-center gap-1 py-2">
+                <button className="text-gray-300 hover:text-white hover:bg-gray-800 transition-all px-4 py-3 flex items-center gap-1">
+                  Industries
                   <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-                    />
-                  </svg>
-                  EN
-                  <svg
-                    className="w-4 h-4"
+                    className="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -129,365 +95,831 @@ export default function Header() {
                     />
                   </svg>
                 </button>
+              </div>
 
-                {/* Language Dropdown */}
-                {isLanguageOpen && (
-                  <div className="absolute top-full right-0 mt-2 bg-[#004D66] text-white rounded-lg shadow-xl overflow-hidden w-48 z-50">
-                    <button
-                      onClick={() => changeLanguage("en")}
-                      className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors text-[#38BDF8]"
-                    >
-                      English
-                    </button>
-                    <button
-                      onClick={() => changeLanguage("es")}
-                      className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors"
-                    >
-                      Español
-                    </button>
-                    <button
-                      onClick={() => changeLanguage("zh-CN")}
-                      className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors"
-                    >
-                      简体中文
-                    </button>
-                    <button
-                      onClick={() => changeLanguage("fr")}
-                      className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors"
-                    >
-                      Français
-                    </button>
-                    <button
-                      onClick={() => changeLanguage("de")}
-                      className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors"
-                    >
-                      Deutsch
-                    </button>
-                  </div>
-                )}
+              {/* About us */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown("about")}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className="text-gray-300 hover:text-white hover:bg-gray-800 transition-all px-4 py-3 flex items-center gap-1">
+                  About us
+                  <svg
+                    className="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Investors */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown("investors")}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className="text-gray-300 hover:text-white hover:bg-gray-800 transition-all px-4 py-3 flex items-center gap-1">
+                  Investors
+                  <svg
+                    className="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Careers */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown("careers")}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className="text-gray-300 hover:text-white hover:bg-gray-800 transition-all px-4 py-3 flex items-center gap-1">
+                  Careers
+                  <svg
+                    className="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
               </div>
             </nav>
 
-            <a
-              href="#contact"
-              className="bg-[#280b57] text-white px-8 py-3 text-sm font-semibold hover:bg-[#1f0944] transition-all uppercase tracking-wider border-2 border-[#280b57] hover:border-[#1f0944]"
-            >
-              Contact Us
-            </a>
+            {/* Right Side Items */}
+            <div className="hidden lg:flex items-center gap-4">
+              {/* Search */}
+              <button className="text-gray-300 hover:text-white transition-colors p-2">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+
+              {/* Language Selector */}
+              <div className="flex items-center gap-2 text-gray-300">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                  />
+                </svg>
+                <span className="text-sm font-medium">IND</span>
+              </div>
+
+              {/* Sign in */}
+              <Link
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors text-sm font-medium px-3 py-2"
+              >
+                Sign in
+              </Link>
+
+              {/* Mobile Menu Button */}
+              <button
+                className="lg:hidden text-gray-300 hover:text-white transition-colors p-2"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={
+                      isMobileMenuOpen
+                        ? "M6 18L18 6M6 6l12 12"
+                        : "M4 6h16M4 12h16M4 18h16"
+                    }
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Full-screen Mega Menu Overlay */}
-      <div
-        className={`fixed left-0 right-0 bg-[#1a1625]/98 backdrop-blur-md border-b border-[#280b57]/30 transition-all duration-500 ease-in-out z-40 ${
-          activeMenu
-            ? "top-[88px] opacity-100 visible"
-            : "top-0 opacity-0 invisible"
-        }`}
-        style={{ maxHeight: activeMenu ? "600px" : "0" }}
-        onMouseEnter={() => activeMenu && setActiveMenu(activeMenu)}
-        onMouseLeave={() => setActiveMenu(null)}
-      >
-        <div className="max-w-7xl mx-auto px-12 py-12">
-          {/* Who We Are Menu */}
-          {activeMenu === "who-we-are" && (
-            <div className="animate-fadeIn">
-              <div className="grid grid-cols-4 gap-12">
-                <div className="col-span-1">
-                  <h3 className="text-xs uppercase tracking-wider text-white font-semibold mb-6">
-                    Who We Are
+      {/* Mega Menu Dropdowns */}
+      {activeDropdown && (
+        <div
+          className="absolute top-full left-0 right-0 w-full bg-white shadow-2xl border-b border-gray-200 z-[60]"
+          onMouseEnter={() => setActiveDropdown(activeDropdown)}
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <div className="max-w-7xl mx-auto px-6 py-12">
+            {/* Services Mega Menu */}
+            {activeDropdown === "solutions" && (
+              <div className="grid grid-cols-3 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-600 mb-6">
+                    Support Services →
                   </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">
-                    Discover our story, values, and the people behind our
-                    success.
-                  </p>
+                  <div className="space-y-2 text-sm max-h-48 overflow-y-auto">
+                    <Link
+                      href="/services/customer-support"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Customer Support (Voice / Chat / Email)
+                    </Link>
+                    <Link
+                      href="/services/technical-support"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Technical Support
+                    </Link>
+                    <Link
+                      href="/services/technical-helpdesk"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Technical Helpdesk Services
+                    </Link>
+                    <Link
+                      href="/services/ticketing-management"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Ticketing Management
+                    </Link>
+                  </div>
                 </div>
-                <div className="col-span-3">
-                  <div className="grid grid-cols-3 gap-8">
-                    <a
-                      href="#who-we-are"
-                      className="group p-6 hover:bg-white/5 transition-all duration-300"
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Business Operations
+                  </h3>
+                  <div className="space-y-2 text-sm max-h-48 overflow-y-auto">
+                    <Link
+                      href="/services/back-office"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
                     >
-                      <div className="w-12 h-12 bg-[#280b57]/10 flex items-center justify-center mb-4 group-hover:bg-[#280b57]/20 transition-colors">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                          />
-                        </svg>
-                      </div>
-                      <h3 className="font-semibold text-white mb-2 text-lg">
-                        Our Story
-                      </h3>
-                      <p className="text-sm text-gray-400">
-                        Journey from vision to industry leadership
-                      </p>
-                    </a>
-                    <a
-                      href="#who-we-are"
-                      className="group p-6 hover:bg-white/5 transition-all duration-300"
+                      Back Office Operations
+                    </Link>
+                    <Link
+                      href="/services/operations-management"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
                     >
-                      <div className="w-12 h-12 bg-[#280b57]/10 flex items-center justify-center mb-4 group-hover:bg-[#280b57]/20 transition-colors">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                          />
-                        </svg>
-                      </div>
-                      <h3 className="font-semibold text-white mb-2 text-lg">
-                        Leadership Team
-                      </h3>
-                      <p className="text-sm text-gray-400">
-                        Meet the visionaries driving innovation
-                      </p>
-                    </a>
-                    <a
-                      href="#who-we-are"
-                      className="group p-6 hover:bg-white/5 transition-all duration-300"
+                      Operations Management
+                    </Link>
+                    <Link
+                      href="/services/collections"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
                     >
-                      <div className="w-12 h-12 bg-[#280b57]/10 flex items-center justify-center mb-4 group-hover:bg-[#280b57]/20 transition-colors">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-                          />
-                        </svg>
-                      </div>
-                      <h3 className="font-semibold text-white mb-2 text-lg">
-                        Our Values
-                      </h3>
-                      <p className="text-sm text-gray-400">
-                        Principles that guide everything we do
-                      </p>
-                    </a>
-                    <a
-                      href="#contact"
-                      className="group p-6 hover:bg-white/5 transition-all duration-300"
+                      Collections Process
+                    </Link>
+                    <Link
+                      href="/services/recruitment"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
                     >
-                      <div className="w-12 h-12 bg-[#280b57]/10 flex items-center justify-center mb-4 group-hover:bg-[#280b57]/20 transition-colors">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          />
-                        </svg>
-                      </div>
-                      <h3 className="font-semibold text-white mb-2 text-lg">
-                        Careers
-                      </h3>
-                      <p className="text-sm text-gray-400">
-                        Join our team and shape the future
-                      </p>
-                    </a>
-                    <a
-                      href="#who-we-are"
-                      className="group p-6 hover:bg-white/5 transition-all duration-300"
+                      Recruitment & Talent Support
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Data & Technology
+                  </h3>
+                  <div className="space-y-2 text-sm max-h-48 overflow-y-auto">
+                    <Link
+                      href="/services/data-processing"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
                     >
-                      <div className="w-12 h-12 bg-[#280b57]/10 flex items-center justify-center mb-4 group-hover:bg-[#280b57]/20 transition-colors">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
+                      Data Processing & Data Services
+                    </Link>
+                    <Link
+                      href="/services/analytics-reporting"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Analytics & Reporting
+                    </Link>
+                    <Link
+                      href="/services/web-development"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Apps and Web Development
+                    </Link>
+                    <Link
+                      href="/services/graphic-design"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Graphic Design & Printing Solutions
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-3">
+                    FEATURED SOLUTIONS
+                  </h4>
+                  <div className="space-y-6">
+                    <div className="flex gap-3">
+                      <div className="w-16 h-12 bg-blue-100 rounded shrink-0"></div>
+                      <div>
+                        <h5 className="font-medium text-gray-900 text-sm mb-1">
+                          24/7 Multilingual Support
+                        </h5>
+                        <p className="text-xs text-gray-600">
+                          Round-the-clock customer service across voice, chat,
+                          and email channels
+                        </p>
                       </div>
-                      <h3 className="font-semibold text-white mb-2 text-lg">
-                        Global Presence
-                      </h3>
-                      <p className="text-sm text-gray-400">
-                        Worldwide reach, local expertise
-                      </p>
-                    </a>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <div className="w-16 h-12 bg-purple-100 rounded shrink-0"></div>
+                      <div>
+                        <h5 className="font-medium text-gray-900 text-sm mb-1">
+                          AI-Powered Analytics
+                        </h5>
+                        <p className="text-xs text-gray-600">
+                          Advanced data insights and business intelligence
+                          solutions
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* What We Do Menu */}
-          {activeMenu === "what-we-do" && (
-            <div className="animate-fadeIn">
-              <div className="grid grid-cols-4 gap-12">
-                <div className="col-span-1">
-                  <h3 className="text-xs uppercase tracking-wider text-white font-semibold mb-6">
-                    What We Do
+            {/* About Us Mega Menu */}
+            {activeDropdown === "about" && (
+              <div className="grid grid-cols-3 gap-12">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    About Ashentrix
                   </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed mb-8">
-                    Comprehensive solutions designed to transform your business
-                    operations and drive growth.
+                  <div className="space-y-4">
+                    <Link
+                      href="/about"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      About Ashentrix
+                    </Link>
+                    <Link
+                      href="/about/vision-mission"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      Vision & Mission
+                    </Link>
+                    <Link
+                      href="/leadership"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      Leadership
+                    </Link>
+                    <Link
+                      href="/about/awards"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      Awards & Recognition
+                    </Link>
+                    <Link
+                      href="/about/news-media"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      News & Media
+                    </Link>
+                    <Link
+                      href="/about/investors-partners"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      Investors & Partners
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Company
+                  </h3>
+                  <div className="space-y-4">
+                    <Link
+                      href="/careers"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      Careers
+                    </Link>
+                    <Link
+                      href="/sustainability"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      Sustainability
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="block text-gray-700 hover:text-blue-600 transition-colors"
+                    >
+                      Contact Us
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-4">
+                    Quick Facts
+                  </h4>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <span className="font-medium">Founded:</span> 2025
+                    </div>
+                    <div>
+                      <span className="font-medium">Headquarters:</span> Delhi
+                      NCR, India
+                    </div>
+                    <div>
+                      <span className="font-medium">Team:</span> Growing
+                    </div>
+                    <div>
+                      <span className="font-medium">Focus:</span> New
+                      Partnerships
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Industries Mega Menu */}
+            {activeDropdown === "industries" && (
+              <div className="grid grid-cols-3 gap-12">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Core Industries
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <Link
+                      href="/industries/insurance"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Insurance
+                    </Link>
+                    <Link
+                      href="/industries/healthcare"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Healthcare
+                    </Link>
+                    <Link
+                      href="/industries/telecom"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Telecom
+                    </Link>
+                    <Link
+                      href="/industries/ecommerce"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      E-commerce
+                    </Link>
+                    <Link
+                      href="/industries/finance"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Finance & Accounting
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Specialized Sectors
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <Link
+                      href="/industries/logistics"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Logistics & Supply Chain
+                    </Link>
+                    <Link
+                      href="/industries/travel"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Travel, Hospitality & Cargo
+                    </Link>
+                    <Link
+                      href="/industries/entertainment"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Entertainment & Social Platforms
+                    </Link>
+                    <Link
+                      href="/industries/it-hardware"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      IT, Hardware & IoT
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-4">
+                    Industry Expertise
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Deep domain knowledge across 9+ industries, helping
+                    businesses transform and scale operations efficiently.
                   </p>
-                  <a
-                    href="#services"
-                    className="inline-flex items-center gap-2 text-sm text-white font-semibold hover:text-[#280b57] group"
+                  <div className="space-y-2 text-xs text-gray-500">
+                    <div>✓ Regulatory Compliance</div>
+                    <div>✓ Industry-specific Workflows</div>
+                    <div>✓ Domain Expert Teams</div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Careers Mega Menu */}
+            {activeDropdown === "careers" && (
+              <div className="grid grid-cols-3 gap-12">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Join Our Team
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <Link
+                      href="/careers/life-at-ashentrix"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Life at Ashentrix
+                    </Link>
+                    <Link
+                      href="/careers/current-openings"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Current Openings
+                    </Link>
+                    <Link
+                      href="/careers/internship"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Internship Programs
+                    </Link>
+                    <Link
+                      href="/careers/apply"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Apply Now
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Why Choose Us
+                  </h3>
+                  <div className="space-y-3 text-sm text-gray-600">
+                    <div>• Global work opportunities</div>
+                    <div>• Continuous learning & development</div>
+                    <div>• Competitive compensation</div>
+                    <div>• Work-life balance</div>
+                    <div>• Innovation-driven culture</div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-4">
+                    We&apos;re Hiring!
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Be part of our founding team as we build the future of
+                    business process outsourcing from Delhi NCR.
+                  </p>
+                  <Link
+                    href="/careers/apply"
+                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors"
                   >
-                    Explore All Services
-                    <svg
-                      className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
+                    View Open Positions →
+                  </Link>
                 </div>
-                <div className="col-span-3">
-                  <div className="grid grid-cols-3 gap-8">
+              </div>
+            )}
+
+            {/* Investors Mega Menu */}
+            {activeDropdown === "investors" && (
+              <div className="grid grid-cols-3 gap-12">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Investor Relations
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <Link
+                      href="/about/investors-partners"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Investors & Partners
+                    </Link>
+                    <Link
+                      href="/investors/financial-reports"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Financial Reports
+                    </Link>
+                    <Link
+                      href="/investors/presentations"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Investor Presentations
+                    </Link>
+                    <Link
+                      href="/investors/governance"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Corporate Governance
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Financial Highlights
+                  </h3>
+                  <div className="space-y-3 text-sm text-gray-600">
                     <div>
-                      <h4 className="text-xs uppercase tracking-wider text-white font-semibold mb-6">
-                        Core Services
-                      </h4>
-                      <div className="space-y-4">
-                        <a href="#services" className="block group">
-                          <h3 className="font-semibold text-white mb-1 group-hover:text-white transition-colors">
-                            Customer Support
-                          </h3>
-                          <p className="text-sm text-gray-400">
-                            24/7 multichannel support solutions
-                          </p>
-                        </a>
-                        <a href="#services" className="block group">
-                          <h3 className="font-semibold text-white mb-1 group-hover:text-white transition-colors">
-                            Process Automation
-                          </h3>
-                          <p className="text-sm text-gray-400">
-                            Intelligent workflow optimization
-                          </p>
-                        </a>
-                        <a href="#services" className="block group">
-                          <h3 className="font-semibold text-white mb-1 group-hover:text-white transition-colors">
-                            Data Operations
-                          </h3>
-                          <p className="text-sm text-gray-400">
-                            Accurate data management
-                          </p>
-                        </a>
-                      </div>
+                      <strong>Company Status:</strong> New Launch
                     </div>
                     <div>
-                      <h4 className="text-xs uppercase tracking-wider text-white font-semibold mb-6">
-                        Industries We Serve
-                      </h4>
-                      <div className="space-y-4">
-                        <a href="#industries" className="block group">
-                          <h3 className="font-semibold text-white mb-1 group-hover:text-white transition-colors">
-                            Banking & Finance
-                          </h3>
-                          <p className="text-sm text-gray-400">
-                            Secure financial solutions
-                          </p>
-                        </a>
-                        <a href="#industries" className="block group">
-                          <h3 className="font-semibold text-white mb-1 group-hover:text-white transition-colors">
-                            Technology & SaaS
-                          </h3>
-                          <p className="text-sm text-gray-400">
-                            Scale your tech business
-                          </p>
-                        </a>
-                        <a href="#industries" className="block group">
-                          <h3 className="font-semibold text-white mb-1 group-hover:text-white transition-colors">
-                            Retail & E-commerce
-                          </h3>
-                          <p className="text-sm text-gray-400">
-                            Seamless customer experiences
-                          </p>
-                        </a>
-                      </div>
+                      <strong>Target Market:</strong> Global
                     </div>
-                    <div className="bg-gradient-to-br from-[#280b57]/5 to-[#280b57]/10 p-6">
-                      <h4 className="font-semibold text-white mb-3">
-                        Need Custom Solutions?
-                      </h4>
-                      <p className="text-sm text-gray-400 mb-4">
-                        Let&apos;s discuss how we can tailor our services to
-                        your unique business needs.
-                      </p>
-                      <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 text-sm text-white font-semibold hover:text-[#280b57]"
-                      >
-                        Contact Us
-                        <svg
-                          className="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </a>
+                    <div>
+                      <strong>Base Location:</strong> Delhi NCR
+                    </div>
+                    <div>
+                      <strong>Growth Stage:</strong> Startup
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
 
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.4s ease-out;
-        }
-      `}</style>
-    </>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-4">
+                    Investment Opportunity
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Be part of the next-generation BPO leader driving digital
+                    transformation across industries.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                  >
+                    Contact Investor Relations →
+                  </Link>
+                </div>
+              </div>
+            )}
+
+            {/* Insights Mega Menu */}
+            {activeDropdown === "insights" && (
+              <div className="grid grid-cols-3 gap-12">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Knowledge Hub
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <Link
+                      href="/insights/blog"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Blog / Insights
+                    </Link>
+                    <Link
+                      href="/insights/whitepapers"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      White Papers
+                    </Link>
+                    <Link
+                      href="/insights/case-studies"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Case Studies
+                    </Link>
+                    <Link
+                      href="/insights/industry-reports"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Industry Reports
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                    Resources
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <Link
+                      href="/insights/webinars"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Webinars
+                    </Link>
+                    <Link
+                      href="/insights/events"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Events
+                    </Link>
+                    <Link
+                      href="/insights/newsletters"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      Newsletters
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-4">
+                    Latest Insights
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Stay informed with cutting-edge research, industry trends,
+                    and best practices in business process optimization.
+                  </p>
+                  <Link
+                    href="/insights"
+                    className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                  >
+                    Explore All Insights →
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-[#1a1625] border-b border-[#280b57]/30">
+          <div className="max-w-7xl mx-auto px-3 py-6">
+            <nav className="space-y-4">
+              <Link
+                href="/"
+                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+
+              {/* Mobile About Section */}
+              <div>
+                <button
+                  className="w-full flex items-center justify-between text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                  onClick={() =>
+                    setActiveDropdown(
+                      activeDropdown === "about" ? null : "about"
+                    )
+                  }
+                >
+                  About
+                  <svg
+                    className={`w-4 h-4 transform transition-transform ${
+                      activeDropdown === "about" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {activeDropdown === "about" && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    <Link
+                      href="/about"
+                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      About Ashentrix
+                    </Link>
+                    <Link
+                      href="/about/vision-mission"
+                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Vision & Mission
+                    </Link>
+                    <Link
+                      href="/leadership"
+                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Leadership
+                    </Link>
+                    <Link
+                      href="/about/awards"
+                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Awards & Recognition
+                    </Link>
+                    <Link
+                      href="/about/news-media"
+                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      News & Media
+                    </Link>
+                    <Link
+                      href="/about/investors-partners"
+                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Investors & Partners
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link
+                href="/industries"
+                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Industries
+              </Link>
+              <Link
+                href="/services"
+                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                href="/careers"
+                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Careers
+              </Link>
+              <Link
+                href="/contact"
+                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link
+                href="#"
+                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Sign in
+              </Link>
+            </nav>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }

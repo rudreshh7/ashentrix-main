@@ -1,5 +1,4 @@
-﻿import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
+﻿import HeroSection from "@/components/HeroSection";
 import WhoWeAre from "@/components/WhoWeAre";
 import ValueProposition from "@/components/ValueProposition";
 import ServicesSection from "@/components/ServicesSection";
@@ -12,12 +11,10 @@ import ResultsSection from "@/components/ResultsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import LeadershipSection from "@/components/LeadershipSection";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      <Header />
       <HeroSection />
       <ClientLogosSection />
       <WhoWeAre />
@@ -31,7 +28,6 @@ export default function Home() {
       <LeadershipSection />
       <InsightsSection />
       <ContactSection />
-      <Footer />
     </div>
   );
 }

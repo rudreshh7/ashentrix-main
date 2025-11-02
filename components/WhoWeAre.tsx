@@ -10,39 +10,43 @@ export default function WhoWeAre() {
               Who We Are
             </h2>
             <p className="text-lg text-[#475569] leading-relaxed mb-6">
-              Ashentrix is a global leader in business process outsourcing and
-              automation. We partner with enterprises to transform their
-              operations through intelligent solutions that combine human
-              expertise with cutting-edge technology.
+              Ashentrix Solutions is a professional outsourcing and business
+              process management company based in Delhi NCR, India. We
+              specialize in providing end-to-end outsourcing services across
+              Insurance, Telecom, Healthcare, Ecommerce, Hardware & IoT,
+              Entertainment, Social Platforms, Finance, Accounting, Recruitment,
+              Logistics, Banking, Travel, and Hospitality.
             </p>
             <p className="text-lg text-[#475569] leading-relaxed mb-6">
-              With over a decade of experience serving Fortune 500 companies
-              across 6 continents, we deliver measurable results that drive
-              growth, reduce costs, and enhance customer experiences.
+              We combine human expertise and smart technology to deliver
+              reliable, flexible support for both domestic and international
+              clients. With a focus on quality, innovation, and scalability, we
+              help organizations streamline workflows and achieve operational
+              excellence.
             </p>
             <div className="grid grid-cols-3 gap-8 pt-6 border-t border-gray-200">
               <div>
                 <div className="text-3xl font-bold text-[#280b57] mb-2">
-                  500+
+                  New
                 </div>
                 <p className="text-sm text-[#475569] uppercase tracking-wide">
-                  Clients Worldwide
+                  Company Launch
                 </p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-[#280b57] mb-2">
-                  15+
+                  2025
                 </div>
                 <p className="text-sm text-[#475569] uppercase tracking-wide">
-                  Years Experience
+                  Starting Fresh
                 </p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-[#280b57] mb-2">
-                  98%
+                  100%
                 </div>
                 <p className="text-sm text-[#475569] uppercase tracking-wide">
-                  Client Retention
+                  Commitment Level
                 </p>
               </div>
             </div>

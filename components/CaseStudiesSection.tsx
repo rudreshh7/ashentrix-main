@@ -11,44 +11,44 @@ interface CaseStudy {
 export default function CaseStudiesSection() {
   const caseStudies: CaseStudy[] = [
     {
-      title: "Digital Transformation at Scale",
-      client: "Global Manufacturing Corp",
+      title: "Manufacturing Digital Transformation",
+      client: "Manufacturing Industry Focus",
       industry: "Manufacturing",
-      challenge: "Legacy systems causing 40% operational inefficiencies",
-      solution: "Implemented AI-driven automation and process optimization",
+      challenge: "Legacy systems creating operational inefficiencies",
+      solution: "AI-driven automation and process optimization framework",
       results: [
-        "40% efficiency increase",
-        "60% cost reduction",
-        "99.9% accuracy improvement",
+        "Target: 40% efficiency increase",
+        "Goal: 60% cost reduction",
+        "Aim: 99% accuracy improvement",
       ],
-      image: "/images/case1.jpg",
+      image: "/images/pro1.jpg",
     },
     {
       title: "Financial Services Modernization",
-      client: "Premier Banking Group",
+      client: "Banking & Finance Sector",
       industry: "Banking & Finance",
-      challenge: "Manual processes slowing customer onboarding by 5 days",
+      challenge: "Manual processes slowing customer operations",
       solution:
         "Automated workflow systems and intelligent document processing",
       results: [
-        "5x faster onboarding",
-        "85% error reduction",
-        "90% customer satisfaction",
+        "Target: 5x faster processing",
+        "Goal: 85% error reduction",
+        "Aim: 90% customer satisfaction",
       ],
-      image: "/images/case2.jpg",
+      image: "/images/pro2.jpg",
     },
     {
-      title: "Supply Chain Optimization",
-      client: "RetailMax Corporation",
+      title: "Supply Chain Optimization Blueprint",
+      client: "Retail & E-commerce Sector",
       industry: "Retail & E-commerce",
-      challenge: "Inventory management causing $2M annual losses",
-      solution: "Predictive analytics and real-time inventory tracking",
+      challenge: "Inventory management inefficiencies",
+      solution: "Predictive analytics and real-time tracking systems",
       results: [
-        "95% inventory accuracy",
-        "$2M cost savings",
-        "30% faster delivery",
+        "Target: 95% inventory accuracy",
+        "Goal: Significant cost savings",
+        "Aim: 30% faster delivery",
       ],
-      image: "/images/case3.jpg",
+      image: "/images/pro3.jpg",
     },
   ];
 
@@ -57,11 +57,11 @@ export default function CaseStudiesSection() {
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-semibold text-gray-900 mb-4 tracking-tight">
-            Success Stories That Inspire
+            Transformation Blueprints
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Real transformations, measurable results. See how we&apos;ve helped
-            organizations achieve operational excellence.
+            Our strategic approach to operational excellence. See the
+            transformation methodologies we&apos;re ready to implement.
           </p>
         </div>
 

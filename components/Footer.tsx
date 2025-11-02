@@ -1,28 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 
 export default function Footer() {
-  const [isFooterLangOpen, setIsFooterLangOpen] = useState(false);
-
-  const changeLanguage = (langCode: string) => {
-    // Wait for Google Translate to be fully loaded
-    const checkAndTranslate = () => {
-      const selectElement = document.querySelector(
-        ".goog-te-combo"
-      ) as HTMLSelectElement;
-      if (selectElement) {
-        selectElement.value = langCode;
-        selectElement.dispatchEvent(new Event("change"));
-        setIsFooterLangOpen(false);
-      } else {
-        // If not loaded yet, try again after a short delay
-        setTimeout(checkAndTranslate, 100);
-      }
-    };
-    checkAndTranslate();
-  };
-
   return (
     <footer className="bg-[#1E293B] text-white">
       {/* Main Footer Content */}
@@ -108,59 +88,107 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Links Section - 6 Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {/* Solutions */}
+        {/* Links Section - 8 Columns */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 mb-16">
+          {/* Services */}
           <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Solutions</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <h4 className="font-bold text-lg mb-6 text-white">Services</h4>
+            <ul className="space-y-2 text-sm text-gray-400 max-h-48 overflow-y-auto">
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/services/customer-support"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Customer Support
-                </a>
+                  Customer Support (Voice / Chat / Email)
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/services/technical-support"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Process Automation
-                </a>
+                  Technical Support
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/services/analytics-reporting"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Data Operations
-                </a>
+                  Analytics & Reporting
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/services/collections"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  CX Consulting
-                </a>
+                  Collections Process
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/services/recruitment"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Analytics & Insights
-                </a>
+                  Recruitment & Talent Support
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/services/back-office"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Digital Transformation
-                </a>
+                  Back Office Operations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/data-processing"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Data Processing & Data Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/operations-management"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Operations Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/graphic-design"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Graphic Design & Printing Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/web-development"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Apps and Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/technical-helpdesk"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Technical Helpdesk Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/ticketing-management"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Ticketing Management
+                </Link>
               </li>
             </ul>
           </div>
@@ -168,106 +196,205 @@ export default function Footer() {
           {/* Industries */}
           <div>
             <h4 className="font-bold text-lg mb-6 text-white">Industries</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-400 max-h-48 overflow-y-auto">
               <li>
-                <a
-                  href="#industries"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Banking & Finance
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#industries"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Manufacturing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#industries"
+                <Link
+                  href="/industries/insurance"
                   className="hover:text-[#280b57] transition-colors"
                 >
                   Insurance
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#industries"
+                <Link
+                  href="/industries/telecom"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Retail & E-commerce
-                </a>
+                  Telecom
+                </Link>
               </li>
               <li>
-                <a
-                  href="#industries"
+                <Link
+                  href="/industries/healthcare"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Technology & SaaS
-                </a>
+                  Healthcare
+                </Link>
               </li>
               <li>
-                <a
-                  href="#industries"
+                <Link
+                  href="/industries/automobiles"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Logistics
-                </a>
+                  Automobiles
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/ecommerce"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  E-commerce & Retail
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/it-software"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  IT & Software Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/education"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Education
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/hardware-iot"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Hardware & IoT
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/entertainment"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Entertainment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/real-estate"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Real Estate
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/social-platforms"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Social Platforms
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/finance"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Finance & Accounting
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/logistics"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Logistics & Supply Chain
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/banking"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Banking
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/travel-hospitality"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Travel & Hospitality
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/government"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Govt. & Public Sector
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/energy-utility"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Energy & Utility
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/media-communications"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Media & Communications
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* About */}
           <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Company</h4>
+            <h4 className="font-bold text-lg mb-6 text-white">About</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
-                <a
-                  href="#who-we-are"
+                <Link
+                  href="/about"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  About Us
-                </a>
+                  About Ashentrix
+                </Link>
               </li>
               <li>
-                <a
-                  href="#who-we-are"
+                <Link
+                  href="/about/vision-mission"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Vision & Mission
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/leadership"
                   className="hover:text-[#280b57] transition-colors"
                 >
                   Leadership
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#results"
+                <Link
+                  href="/about/awards"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Our Impact
-                </a>
+                  Awards & Recognition
+                </Link>
               </li>
               <li>
-                <a
-                  href="#case-studies"
+                <Link
+                  href="/about/news-media"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Case Studies
-                </a>
+                  News & Media
+                </Link>
               </li>
               <li>
-                <a
-                  href="#thinking"
+                <Link
+                  href="/about/investors-partners"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Our Thinking
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Newsroom
-                </a>
+                  Investors & Partners
+                </Link>
               </li>
             </ul>
           </div>
@@ -349,42 +476,202 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Careers & Legal */}
+          {/* Careers */}
           <div>
             <h4 className="font-bold text-lg mb-6 text-white">Careers</h4>
             <ul className="space-y-3 text-sm text-gray-400 mb-8">
               <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Join Our Team
-                </a>
+                <Link
+                  href="/careers/life-at-ashentrix"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Life at Ashentrix
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Open Positions
-                </a>
+                <Link
+                  href="/careers/current-openings"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Current Openings
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Culture & Values
-                </a>
+                <Link
+                  href="/careers/internship"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Internship Programs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers/apply"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Apply Now
+                </Link>
               </li>
             </ul>
+          </div>
+
+          {/* Contact & Legal */}
+          <div>
+            <h4 className="font-bold text-lg mb-6 text-white">Contact</h4>
+            <ul className="space-y-3 text-sm text-gray-400 mb-8">
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Contact Form
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact/locations"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Office Locations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact/partner"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Partner With Us
+                </Link>
+              </li>
+            </ul>
+
             <h4 className="font-bold text-lg mb-6 text-white">Legal</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
+                <Link
+                  href="/legal/privacy"
+                  className="hover:text-[#280b57] transition-colors"
+                >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
+                <Link
+                  href="/legal/security"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Data Security & Compliance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/terms"
+                  className="hover:text-[#280b57] transition-colors"
+                >
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Cookie Policy
-                </a>
+                <Link
+                  href="/legal/disclaimer"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Disclaimer
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="font-bold text-lg mb-6 text-white">Resources</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li>
+                <Link
+                  href="/resources/whitepapers"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  White Papers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/case-studies"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/webinars"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Webinars
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/downloads"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Downloads
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/roi-calculator"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  ROI Calculator
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-bold text-lg mb-6 text-white">Quick Links</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li>
+                <Link
+                  href="/sitemap"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Sitemap
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/feedback"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Feedback
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/newsletter"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Newsletter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/support/help"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/accessibility"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Accessibility
+                </Link>
               </li>
             </ul>
           </div>
@@ -393,17 +680,21 @@ export default function Footer() {
         {/* Contact Information */}
         <div className="grid md:grid-cols-3 gap-8 mb-16 pb-16 border-b border-gray-700">
           <div>
-            <h4 className="font-bold text-lg mb-4 text-white">
-              Global Headquarters
-            </h4>
+            <h4 className="font-bold text-lg mb-4 text-white">Headquarters</h4>
             <p className="text-gray-400 text-sm leading-relaxed">
-              123 Business Avenue
+              Delhi NCR
               <br />
-              Tech District, Suite 500
+              India
               <br />
-              San Francisco, CA 94105
               <br />
-              United States
+              <a
+                href="https://www.ashentrix.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#280b57] hover:text-[#280b57]"
+              >
+                www.ashentrix.com
+              </a>
             </p>
           </div>
           <div>
@@ -411,26 +702,28 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed">
               Email:{" "}
               <a
-                href="mailto:info@ashentrix.com"
+                href="mailto:service@ashentrix.com"
                 className="text-[#280b57] hover:text-[#280b57]"
               >
-                info@ashentrix.com
+                service@ashentrix.com
               </a>
               <br />
               Phone:{" "}
               <a
-                href="tel:+18885551234"
+                href="tel:+919711179821"
                 className="text-[#280b57] hover:text-[#280b57]"
               >
-                +1 (888) 555-1234
+                +91-971 117 9821
               </a>
               <br />
-              Support:{" "}
+              WhatsApp:{" "}
               <a
-                href="tel:+18885555678"
+                href="https://wa.me/919711179821"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#280b57] hover:text-[#280b57]"
               >
-                +1 (888) 555-5678
+                +91-971 117 9821
               </a>
             </p>
           </div>
@@ -451,98 +744,33 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>© 2025 Ashentrix. All rights reserved worldwide.</p>
           <div className="flex flex-wrap gap-6 justify-center">
-            <a href="#" className="hover:text-[#280b57] transition-colors">
-              Accessibility
-            </a>
-            <a href="#" className="hover:text-[#280b57] transition-colors">
-              Sitemap
-            </a>
-            <a href="#" className="hover:text-[#280b57] transition-colors">
-              Compliance
-            </a>
-            <a href="#" className="hover:text-[#280b57] transition-colors">
-              Security
-            </a>
-            <a href="#" className="hover:text-[#280b57] transition-colors">
+            <Link href="#" className="hover:text-[#280b57] transition-colors">
               Investors
-            </a>
-          </div>
-          <div className="flex gap-3 items-center relative">
-            <span className="text-xs">Available in:</span>
-            <div
-              className="relative"
-              onMouseEnter={() => setIsFooterLangOpen(true)}
-              onMouseLeave={() => setIsFooterLangOpen(false)}
+            </Link>
+            <Link href="#" className="hover:text-[#280b57] transition-colors">
+              Partners
+            </Link>
+            <Link href="#" className="hover:text-[#280b57] transition-colors">
+              Global Clients
+            </Link>
+            <Link href="#" className="hover:text-[#280b57] transition-colors">
+              Legal
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-[#280b57] transition-colors"
             >
-              <button className="bg-gray-800 border border-gray-700 rounded px-4 py-2 text-sm focus:outline-none focus:border-[#280b57] hover:border-[#280b57] transition-colors flex items-center gap-2">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-                  />
-                </svg>
-                English
-                <svg
-                  className="w-3 h-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {/* Language Dropdown */}
-              {isFooterLangOpen && (
-                <div className="absolute bottom-full right-0 mb-2 bg-[#004D66] text-white  shadow-xl overflow-hidden w-48 z-50">
-                  <button
-                    onClick={() => changeLanguage("en")}
-                    className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors text-[#38BDF8]"
-                  >
-                    English
-                  </button>
-                  <button
-                    onClick={() => changeLanguage("es")}
-                    className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors"
-                  >
-                    Español
-                  </button>
-                  <button
-                    onClick={() => changeLanguage("zh-CN")}
-                    className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors"
-                  >
-                    简体中文
-                  </button>
-                  <button
-                    onClick={() => changeLanguage("fr")}
-                    className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors"
-                  >
-                    Français
-                  </button>
-                  <button
-                    onClick={() => changeLanguage("de")}
-                    className="block w-full text-left px-4 py-3 hover:bg-[#00384D] transition-colors"
-                  >
-                    Deutsch
-                  </button>
-                </div>
-              )}
-            </div>
+              Privacy Policy
+            </Link>
+            <Link href="#" className="hover:text-[#280b57] transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="#" className="hover:text-[#280b57] transition-colors">
+              (Sitemap)
+            </Link>
           </div>
         </div>
       </div>
