@@ -710,20 +710,20 @@ export default function Footer() {
               <br />
               Phone:{" "}
               <a
-                href="tel:+918005818019"
+                href="tel:+919711179821"
                 className="text-[#280b57] hover:text-[#280b57]"
               >
-                +91-800 581 8019
+                +91-971 117 9821
               </a>
               <br />
               WhatsApp:{" "}
               <a
-                href="https://wa.me/918005818019"
+                href="https://wa.me/919711179821"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#280b57] hover:text-[#280b57]"
               >
-                +91-800 581 8019
+                +91-971 117 9821
               </a>
             </p>
           </div>
@@ -732,11 +732,9 @@ export default function Footer() {
               Business Hours
             </h4>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Monday - Friday: 9:00 AM - 6:00 PM PST
+              Mon to Fri: 10 AM to 6 PM
               <br />
-              Saturday: 10:00 AM - 4:00 PM PST
-              <br />
-              Sunday: Closed
+              Sat & Sun: Closed
               <br />
               <span className="text-[#280b57]">24/7 Support Available</span>
             </p>

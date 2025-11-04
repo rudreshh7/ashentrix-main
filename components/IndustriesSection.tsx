@@ -51,13 +51,13 @@ const IndustryCard = ({ title, image }: IndustryCardProps) => {
 
 export default function IndustriesSection() {
   const industries: IndustryCardProps[] = [
-    { title: "Insurance", image: "/images/pro1.jpg" },
-    { title: "Telecom", image: "/images/pro2.jpg" },
-    { title: "Healthcare", image: "/images/pro3.jpg" },
-    { title: "E-commerce & Retail", image: "/images/pro4.jpg" },
-    { title: "Banking & Finance", image: "/images/pro1.jpg" },
-    { title: "IT & Software Development", image: "/images/pro2.jpg" },
-    { title: "Travel & Hospitality", image: "/images/pro3.jpg" },
+    { title: "Insurance", image: "/images/industries/insurance.jpg" },
+    { title: "Telecom", image: "/images/industries/telecom.jpg" },
+    { title: "Healthcare", image: "/images/industries/healthcare.jpg" },
+    { title: "E-commerce & Retail", image: "/images/industries/ecommerce.jpg" },
+    { title: "Banking & Finance", image: "/images/industries/bank.jpg" },
+    { title: "IT & Software Development", image: "/images/industries/it.jpg" },
+    { title: "Travel & Hospitality", image: "/images/industries/hospitality.jpg" },
     { title: "Automobiles", image: "/images/pro4.jpg" },
   ];
 

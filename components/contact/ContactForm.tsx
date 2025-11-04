@@ -231,15 +231,15 @@ export default function ContactForm() {
               </h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Monday - Friday:</span>
+                  <span className="text-gray-600">Mon to Fri:</span>
                   <span className="text-gray-900 font-medium">
-                    9:00 AM - 6:00 PM IST
+                    10 AM to 6 PM
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Saturday:</span>
+                  <span className="text-gray-600">Sat & Sun:</span>
                   <span className="text-gray-900 font-medium">
-                    10:00 AM - 2:00 PM IST
+                    Closed
                   </span>
                 </div>
                 <div className="flex justify-between">

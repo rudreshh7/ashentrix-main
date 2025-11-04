@@ -73,10 +73,10 @@ export default function ContactSection() {
                     Our team typically responds within 24 hours
                   </p>
                   <a
-                    href="mailto:hello@ashentrix.com"
+                    href="mailto:service@ashentrix.com"
                     className="text-gray-900 hover:text-gray-600 font-semibold transition-colors"
                   >
-                    hello@ashentrix.com
+                    service@ashentrix.com
                   </a>
                 </div>
               </div>
@@ -106,13 +106,15 @@ export default function ContactSection() {
                     Call Us
                   </h3>
                   <p className="text-gray-600 text-sm mb-2">
-                    Mon-Fri from 8am to 6pm EST
+                    Mon to Fri: 10 AM to 6 PM
+                    <br />
+                    Sat & Sun: Closed
                   </p>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+919711179821"
                     className="text-gray-900 hover:text-gray-600 font-semibold transition-colors"
                   >
-                    +1 (234) 567-890
+                    +91-971 117 9821
                   </a>
                 </div>
               </div>
@@ -259,7 +261,7 @@ export default function ContactSection() {
                         ? "border-gray-900"
                         : "border-gray-300"
                     }  focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300`}
-                    placeholder="+1 (234) 567-890"
+                    placeholder="+91-971 117 9821"
                   />
                 </div>
               </div>
