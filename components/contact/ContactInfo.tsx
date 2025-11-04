@@ -18,8 +18,8 @@ export default function ContactInfo() {
     {
       title: "Direct Contact",
       description: "Call or WhatsApp for immediate assistance and support",
-      contact: "+91-971 117 9821",
-      whatsapp: "https://wa.me/9711179821",
+      contact: "+91-800 581 8019",
+      whatsapp: "https://wa.me/918005818019",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path

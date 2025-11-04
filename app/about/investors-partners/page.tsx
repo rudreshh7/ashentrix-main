@@ -369,7 +369,7 @@ export default function InvestorsPartnersPage() {
               </h3>
               <div className="space-y-4 text-gray-700">
                 <p>Email: service@ashentrix.com</p>
-                <p>Phone: +91-971 117 9821</p>
+                <p>Phone: +91-800 581 8019</p>
                 <p>
                   Address: Delhi NCR
                   <br />
@@ -384,7 +384,7 @@ export default function InvestorsPartnersPage() {
               </h3>
               <div className="space-y-4 text-gray-700">
                 <p>Email: service@ashentrix.com</p>
-                <p>Phone: +91-971 117 9821</p>
+                <p>Phone: +91-800 581 8019</p>
                 <p>
                   Address: Delhi NCR
                   <br />

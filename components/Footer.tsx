@@ -710,20 +710,20 @@ export default function Footer() {
               <br />
               Phone:{" "}
               <a
-                href="tel:+919711179821"
+                href="tel:+918005818019"
                 className="text-[#280b57] hover:text-[#280b57]"
               >
-                +91-971 117 9821
+                +91-800 581 8019
               </a>
               <br />
               WhatsApp:{" "}
               <a
-                href="https://wa.me/919711179821"
+                href="https://wa.me/918005818019"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#280b57] hover:text-[#280b57]"
               >
-                +91-971 117 9821
+                +91-800 581 8019
               </a>
             </p>
           </div>
