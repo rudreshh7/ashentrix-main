@@ -238,9 +238,7 @@ export default function ContactForm() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Sat & Sun:</span>
-                  <span className="text-gray-900 font-medium">
-                    Closed
-                  </span>
+                  <span className="text-gray-900 font-medium">Closed</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">24/7 Support:</span>

@@ -57,8 +57,11 @@ export default function IndustriesSection() {
     { title: "E-commerce & Retail", image: "/images/industries/ecommerce.jpg" },
     { title: "Banking & Finance", image: "/images/industries/bank.jpg" },
     { title: "IT & Software Development", image: "/images/industries/it.jpg" },
-    { title: "Travel & Hospitality", image: "/images/industries/hospitality.jpg" },
-    { title: "Automobiles", image: "/images/pro4.jpg" },
+    {
+      title: "Travel & Hospitality",
+      image: "/images/industries/hospitality.jpg",
+    },
+    { title: "Automobiles", image: "/images/industries/automobile.jpg" },
   ];
 
   return (

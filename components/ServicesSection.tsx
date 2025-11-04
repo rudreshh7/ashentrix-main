@@ -18,7 +18,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/pro2.jpg"
+              src="/images/services/customersupport.jpg"
               alt="Customer Support"
               width={300}
               height={200}
@@ -38,7 +38,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/pro3.jpg"
+              src="/images/services/technicalsupport.jpg"
               alt="Technical Support"
               width={300}
               height={200}
@@ -58,7 +58,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/pro1.jpg"
+              src="/images/services/backofficeoperations.jpg"
               alt="Back Office Operations"
               width={300}
               height={200}
@@ -78,7 +78,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/pro4.jpg"
+              src="/images/services/process.jpg"
               alt="Data Processing"
               width={300}
               height={200}
@@ -98,7 +98,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/pro1.jpg"
+              src="/images/services/reporting.jpg"
               alt="Analytics & Reporting"
               width={300}
               height={200}
@@ -118,7 +118,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/pro2.jpg"
+              src="/images/services/process.jpg"
               alt="Collections Process"
               width={300}
               height={200}
@@ -138,7 +138,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/pro3.jpg"
+              src="/images/services/talentsupport.jpg"
               alt="Recruitment Support"
               width={300}
               height={200}
@@ -158,7 +158,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/pro4.jpg"
+              src="/images/services/operations.jpg"
               alt="Operations Management"
               width={300}
               height={200}
