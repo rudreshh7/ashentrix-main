@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactHero from "@/components/contact/ContactHero";
 import ContactForm from "@/components/contact/ContactForm";
+import SimpleContactTest from "@/components/contact/SimpleContactTest";
 import OfficeLocations from "@/components/contact/OfficeLocations";
 import ContactInfo from "@/components/contact/ContactInfo";
 
@@ -26,6 +27,9 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#F8FAFC]">
       <Header />
       <ContactHero />
+      <div className="py-10">
+        <SimpleContactTest />
+      </div>
       <ContactForm />
       <OfficeLocations />
       <ContactInfo />

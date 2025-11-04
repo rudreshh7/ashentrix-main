@@ -3,31 +3,51 @@
 import { useState } from "react";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    company: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-  };
+    setIsSubmitting(true);
+    setResult("");
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Add the Web3Forms access key
+    formData.append("access_key", "8d5a9af8-325d-4da9-9ccb-5bb326b436d6");
+    
+    // Add additional metadata for Web3Forms
+    formData.append("subject", "New Contact Form Submission - Ashentrix Solutions");
+    formData.append("cc", "service@ashentrix.com");
+
+    console.log("FormData contents:");
+    for (const [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+      console.log("Response from Web3Forms:", data);
+
+      if (data.success) {
+        setResult("✅ Message sent successfully! We'll get back to you within 24 hours.");
+        form.reset();
+      } else {
+        console.error("Web3Forms error:", data);
+        setResult(`❌ Error: ${data.message || 'Something went wrong. Please try again or contact us directly.'}`);
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+      setResult("❌ Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -54,8 +74,6 @@ export default function ContactForm() {
                     type="text"
                     name="firstName"
                     required
-                    value={formData.firstName}
-                    onChange={handleChange}
                     className="w-full p-3 border border-gray-300 focus:outline-none focus:border-[#280b57] transition-colors"
                   />
                 </div>
@@ -67,8 +85,6 @@ export default function ContactForm() {
                     type="text"
                     name="lastName"
                     required
-                    value={formData.lastName}
-                    onChange={handleChange}
                     className="w-full p-3 border border-gray-300 focus:outline-none focus:border-[#280b57] transition-colors"
                   />
                 </div>
@@ -82,8 +98,6 @@ export default function ContactForm() {
                   type="email"
                   name="email"
                   required
-                  value={formData.email}
-                  onChange={handleChange}
                   className="w-full p-3 border border-gray-300 focus:outline-none focus:border-[#280b57] transition-colors"
                 />
               </div>
@@ -97,8 +111,6 @@ export default function ContactForm() {
                     type="text"
                     name="company"
                     required
-                    value={formData.company}
-                    onChange={handleChange}
                     className="w-full p-3 border border-gray-300 focus:outline-none focus:border-[#280b57] transition-colors"
                   />
                 </div>
@@ -109,8 +121,6 @@ export default function ContactForm() {
                   <input
                     type="tel"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
                     className="w-full p-3 border border-gray-300 focus:outline-none focus:border-[#280b57] transition-colors"
                   />
                 </div>
@@ -122,16 +132,18 @@ export default function ContactForm() {
                 </label>
                 <select
                   name="service"
-                  value={formData.service}
-                  onChange={handleChange}
                   className="w-full p-3 border border-gray-300 focus:outline-none focus:border-[#280b57] transition-colors"
                 >
                   <option value="">Select a service</option>
-                  <option value="bpo">Business Process Outsourcing</option>
-                  <option value="automation">Intelligent Automation</option>
-                  <option value="digital">Digital Transformation</option>
-                  <option value="consulting">Strategic Consulting</option>
-                  <option value="other">Other</option>
+                  <option value="customer-support">Customer Support (Voice/Chat/Email)</option>
+                  <option value="technical-support">Technical Support</option>
+                  <option value="back-office">Back Office Operations</option>
+                  <option value="data-processing">Data Processing & Data Services</option>
+                  <option value="analytics">Analytics & Reporting</option>
+                  <option value="collections">Collections Process</option>
+                  <option value="recruitment">Recruitment & Talent Support</option>
+                  <option value="operations">Operations Management</option>
+                  <option value="other">Other Services</option>
                 </select>
               </div>
 
@@ -143,8 +155,6 @@ export default function ContactForm() {
                   name="message"
                   required
                   rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
                   placeholder="Tell us about your business challenges and objectives..."
                   className="w-full p-3 border border-gray-300 focus:outline-none focus:border-[#280b57] transition-colors resize-vertical"
                 />
@@ -152,10 +162,26 @@ export default function ContactForm() {
 
               <button
                 type="submit"
-                className="w-full bg-[#280b57] text-white py-3 px-6 font-semibold hover:bg-[#280b57]/90 transition-colors"
+                disabled={isSubmitting}
+                className={`w-full py-3 px-6 font-semibold transition-colors ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed text-white' 
+                    : 'bg-[#280b57] text-white hover:bg-[#280b57]/90'
+                }`}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+
+              {/* Display result message */}
+              {result && (
+                <div className={`mt-4 p-4 rounded-lg ${
+                  result.includes('✅') 
+                    ? 'bg-green-50 text-green-800 border border-green-200' 
+                    : 'bg-red-50 text-red-800 border border-red-200'
+                }`}>
+                  {result}
+                </div>
+              )}
             </form>
           </div>
 
@@ -178,8 +204,16 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Phone</h4>
-                  <p className="text-gray-600">+91 120 456 7890</p>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">
+                    <a href="tel:+919711179821" className="hover:text-[#280b57] transition-colors">
+                      +91-971 117 9821
+                    </a>
+                  </p>
+                  <p className="text-gray-600">
+                    <a href="https://wa.me/919711179821" target="_blank" rel="noopener noreferrer" className="hover:text-[#280b57] transition-colors">
+                      WhatsApp: +91-971 117 9821
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -196,8 +230,14 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Email</h4>
-                  <p className="text-gray-600">info@ashentrix.com</p>
-                  <p className="text-gray-600">sales@ashentrix.com</p>
+                  <p className="text-gray-600">
+                    <a href="mailto:service@ashentrix.com" className="hover:text-[#280b57] transition-colors">
+                      service@ashentrix.com
+                    </a>
+                  </p>
+                  <p className="text-gray-500 text-sm mt-1">
+                    Our team typically responds within 24 hours
+                  </p>
                 </div>
               </div>
 
