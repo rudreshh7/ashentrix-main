@@ -22,7 +22,7 @@ export default function LeadershipSection() {
     },
     {
       name: "Priya Jha",
-      position: "Co-Founder & Operations Lead",
+      position: "Co-Founder & Operations Head",
       description:
         "Co-founder and operational excellence expert focused on building scalable processes and ensuring seamless service delivery for global clients.",
       image: "/priyajha.jpg",

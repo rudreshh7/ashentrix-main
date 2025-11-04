@@ -11,7 +11,7 @@ export default function AboutTeam() {
     },
     {
       name: "Priya Jha",
-      role: "Co-Founder & Operations Lead",
+      role: "Co-Founder & Operations Head",
       image: "/priyajha.jpg",
       description:
         "Operations expert focused on building scalable processes and ensuring exceptional service delivery.",

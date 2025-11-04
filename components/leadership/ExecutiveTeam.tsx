@@ -16,7 +16,7 @@ export default function ExecutiveTeam() {
     },
     {
       name: "Priya Jha",
-      role: "Co-Founder & Operations Lead",
+      role: "Co-Founder & Operations Head",
       bio: "Co-founder and operational excellence expert focused on building scalable processes and ensuring seamless service delivery for global clients.",
       image: "/priyajha.jpg",
       linkedin: "#",
