@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -15,11 +16,14 @@ export default function Header() {
             {/* Logo Section */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center gap-3">
-                <div className="bg-white px-3 py-1 rounded">
-                  <span className="text-xl font-black text-black tracking-tight">
-                    ASHENTRIX
-                  </span>
-                </div>
+                <Image
+                  src="/ashentrix.jpeg"
+                  alt="Ashentrix Solutions Logo"
+                  width={180}
+                  height={60}
+                  className="h-12 w-auto"
+                  priority
+                />
               </Link>
             </div>
 
