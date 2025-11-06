@@ -70,7 +70,9 @@ export default function Footer() {
           </div>
 
           <div className="text-center lg:text-left">
-            <h4 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Stay Updated</h4>
+            <h4 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+              Stay Updated
+            </h4>
             <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
               Subscribe to our newsletter for the latest insights, case studies,
               and industry trends.
@@ -92,7 +94,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {/* Services */}
           <div className="mb-8 sm:mb-0">
-            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Services</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
+              Services
+            </h4>
             <ul className="space-y-2 text-sm text-gray-400 max-h-48 overflow-y-auto">
               <li>
                 <Link
@@ -195,7 +199,9 @@ export default function Footer() {
 
           {/* Industries */}
           <div className="mb-8 sm:mb-0">
-            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Industries</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
+              Industries
+            </h4>
             <ul className="space-y-2 text-sm text-gray-400 max-h-48 overflow-y-auto">
               <li>
                 <Link
@@ -346,7 +352,9 @@ export default function Footer() {
 
           {/* About */}
           <div className="mb-8 sm:mb-0">
-            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">About</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
+              About
+            </h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <Link
@@ -401,7 +409,9 @@ export default function Footer() {
 
           {/* Resources */}
           <div className="mb-8 sm:mb-0">
-            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Resources</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
+              Resources
+            </h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <Link
@@ -456,7 +466,9 @@ export default function Footer() {
 
           {/* Support */}
           <div className="mb-8 sm:mb-0">
-            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Support</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
+              Support
+            </h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <a
@@ -496,7 +508,9 @@ export default function Footer() {
 
           {/* Careers */}
           <div className="mb-8 sm:mb-0">
-            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Careers</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
+              Careers
+            </h4>
             <ul className="space-y-3 text-sm text-gray-400 mb-6 sm:mb-8">
               <li>
                 <Link
@@ -535,7 +549,9 @@ export default function Footer() {
 
           {/* Contact & Legal */}
           <div className="mb-8 sm:mb-0">
-            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Contact</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
+              Contact
+            </h4>
             <ul className="space-y-3 text-sm text-gray-400 mb-6 sm:mb-8">
               <li>
                 <Link
@@ -563,7 +579,9 @@ export default function Footer() {
               </li>
             </ul>
 
-            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Legal</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
+              Legal
+            </h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <Link
@@ -599,13 +617,14 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
         </div>
 
         {/* Contact Information */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 lg:mb-16 pb-12 lg:pb-16 border-b border-gray-700">
           <div className="text-center sm:text-left">
-            <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-white">Headquarters</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-white">
+              Headquarters
+            </h4>
             <p className="text-gray-400 text-sm leading-relaxed">
               Delhi NCR
               <br />
@@ -623,7 +642,9 @@ export default function Footer() {
             </p>
           </div>
           <div className="text-center sm:text-left">
-            <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-white">Contact</h4>
+            <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-white">
+              Contact
+            </h4>
             <p className="text-gray-400 text-sm leading-relaxed">
               Email:{" "}
               <a
@@ -668,18 +689,32 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 text-xs sm:text-sm text-gray-400">
-          <p className="text-center lg:text-left">© 2025 Ashentrix. All rights reserved worldwide.</p>
+          <p className="text-center lg:text-left">
+            © 2025 Ashentrix. All rights reserved worldwide.
+          </p>
           <div className="flex flex-wrap gap-3 sm:gap-4 lg:gap-6 justify-center lg:justify-end">
-            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
+            <Link
+              href="#"
+              className="hover:text-[#280b57] transition-colors whitespace-nowrap"
+            >
               Investors
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
+            <Link
+              href="#"
+              className="hover:text-[#280b57] transition-colors whitespace-nowrap"
+            >
               Partners
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
+            <Link
+              href="#"
+              className="hover:text-[#280b57] transition-colors whitespace-nowrap"
+            >
               Global Clients
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
+            <Link
+              href="#"
+              className="hover:text-[#280b57] transition-colors whitespace-nowrap"
+            >
               Legal
             </Link>
             <Link
@@ -688,10 +723,16 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
+            <Link
+              href="#"
+              className="hover:text-[#280b57] transition-colors whitespace-nowrap"
+            >
               Terms of Service
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
+            <Link
+              href="#"
+              className="hover:text-[#280b57] transition-colors whitespace-nowrap"
+            >
               Sitemap
             </Link>
           </div>
