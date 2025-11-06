@@ -53,7 +53,7 @@ export default function WhoWeAre() {
           </div>
           <div className="relative h-96">
             <Image
-              src="/images/pro1.jpg"
+              src="/images/whoweare.jpg"
               alt="Ashentrix Team"
               width={600}
               height={400}

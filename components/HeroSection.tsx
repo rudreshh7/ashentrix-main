@@ -42,7 +42,7 @@ export default function HeroSection() {
           </div>
           <div className="relative rounded-2xl overflow-hidden">
             <Image
-              src="/images/pro1.jpg"
+              src="/images/home.jpg"
               alt="Business"
               width={700}
               height={500}

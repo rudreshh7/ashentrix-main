@@ -703,7 +703,7 @@ export default function Footer() {
               Email:{" "}
               <a
                 href="mailto:service@ashentrix.com"
-                className="text-[#280b57] hover:text-[#280b57]"
+                className="text-white hover:text-gray-300"
               >
                 service@ashentrix.com
               </a>
@@ -711,7 +711,7 @@ export default function Footer() {
               Phone:{" "}
               <a
                 href="tel:+919711179821"
-                className="text-[#280b57] hover:text-[#280b57]"
+                className="text-white hover:text-gray-300"
               >
                 +91-971 117 9821
               </a>
@@ -721,7 +721,7 @@ export default function Footer() {
                 href="https://wa.me/919711179821"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#280b57] hover:text-[#280b57]"
+                className="text-white hover:text-gray-300"
               >
                 +91-971 117 9821
               </a>
