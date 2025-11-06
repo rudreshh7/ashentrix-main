@@ -6,24 +6,24 @@ export default function Footer() {
   return (
     <footer className="bg-[#1E293B] text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         {/* Top Section - Brand and Newsletter */}
-        <div className="grid md:grid-cols-2 gap-16 mb-16 pb-16 border-b border-gray-700">
-          <div>
-            <h3 className="text-4xl font-black text-white italic mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 lg:mb-16 pb-12 lg:pb-16 border-b border-gray-700">
+          <div className="text-center lg:text-left">
+            <h3 className="text-3xl sm:text-4xl font-black text-white italic mb-4 sm:mb-6">
               Ashentrix
             </h3>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-md mx-auto lg:mx-0">
               Leading the future of business process outsourcing with
               innovation, excellence, and transformative solutions.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4 justify-center lg:justify-start">
               <a
                 href="#"
-                className="w-12 h-12 bg-gray-700  flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -32,10 +32,10 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-gray-700  flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -44,10 +44,10 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-gray-700  flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -56,10 +56,10 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-gray-700  flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#280b57] transition-all hover:scale-110"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -69,30 +69,30 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h4 className="text-2xl font-semibold mb-4">Stay Updated</h4>
-            <p className="text-gray-400 mb-6">
+          <div className="text-center lg:text-left">
+            <h4 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Stay Updated</h4>
+            <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
               Subscribe to our newsletter for the latest insights, case studies,
               and industry trends.
             </p>
-            <form className="flex gap-3">
+            <form className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 bg-gray-800 border border-gray-700  focus:outline-none focus:border-[#280b57] text-white placeholder-gray-500"
+                className="flex-1 px-4 sm:px-6 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[#280b57] text-white placeholder-gray-500 text-sm sm:text-base"
               />
-              <button className="bg-[#280b57] text-white px-8 py-4  font-semibold hover:bg-[#1f0944] transition-all whitespace-nowrap">
+              <button className="bg-[#280b57] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-[#1f0944] transition-all whitespace-nowrap text-sm sm:text-base">
                 Subscribe
               </button>
             </form>
           </div>
         </div>
 
-        {/* Links Section - 8 Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 mb-16">
+        {/* Links Section - Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {/* Services */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Services</h4>
+          <div className="mb-8 sm:mb-0">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Services</h4>
             <ul className="space-y-2 text-sm text-gray-400 max-h-48 overflow-y-auto">
               <li>
                 <Link
@@ -194,8 +194,8 @@ export default function Footer() {
           </div>
 
           {/* Industries */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Industries</h4>
+          <div className="mb-8 sm:mb-0">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Industries</h4>
             <ul className="space-y-2 text-sm text-gray-400 max-h-48 overflow-y-auto">
               <li>
                 <Link
@@ -345,8 +345,8 @@ export default function Footer() {
           </div>
 
           {/* About */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">About</h4>
+          <div className="mb-8 sm:mb-0">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">About</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <Link
@@ -400,191 +400,8 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Resources</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  White Papers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Webinars
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  eBooks
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  ROI Calculator
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Partner Portal
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Support</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
-              <li>
-                <a
-                  href="#contact"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  API Reference
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  System Status
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#280b57] transition-colors">
-                  Community Forum
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Careers */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Careers</h4>
-            <ul className="space-y-3 text-sm text-gray-400 mb-8">
-              <li>
-                <Link
-                  href="/careers/life-at-ashentrix"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Life at Ashentrix
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers/current-openings"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Current Openings
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers/internship"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Internship Programs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers/apply"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Apply Now
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact & Legal */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Contact</h4>
-            <ul className="space-y-3 text-sm text-gray-400 mb-8">
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Contact Form
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact/locations"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Office Locations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact/partner"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Partner With Us
-                </Link>
-              </li>
-            </ul>
-
-            <h4 className="font-bold text-lg mb-6 text-white">Legal</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
-              <li>
-                <Link
-                  href="/legal/privacy"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal/security"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Data Security & Compliance
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal/terms"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal/disclaimer"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Disclaimer
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Resources</h4>
+          <div className="mb-8 sm:mb-0">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Resources</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <Link
@@ -626,61 +443,169 @@ export default function Footer() {
                   ROI Calculator
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/resources/blog"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Quick Links</h4>
+          {/* Support */}
+          <div className="mb-8 sm:mb-0">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Support</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li>
+                <a
+                  href="#contact"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#280b57] transition-colors">
+                  Help Center
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#280b57] transition-colors">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#280b57] transition-colors">
+                  API Reference
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#280b57] transition-colors">
+                  System Status
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#280b57] transition-colors">
+                  Community Forum
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Careers */}
+          <div className="mb-8 sm:mb-0">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Careers</h4>
+            <ul className="space-y-3 text-sm text-gray-400 mb-6 sm:mb-8">
+              <li>
+                <Link
+                  href="/careers/life-at-ashentrix"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Life at Ashentrix
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers/current-openings"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Current Openings
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers/internship"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Internship Programs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers/apply"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Apply Now
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact & Legal */}
+          <div className="mb-8 sm:mb-0">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Contact</h4>
+            <ul className="space-y-3 text-sm text-gray-400 mb-6 sm:mb-8">
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Contact Form
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact/locations"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Office Locations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact/partner"
+                  className="hover:text-[#280b57] transition-colors"
+                >
+                  Partner With Us
+                </Link>
+              </li>
+            </ul>
+
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">Legal</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <Link
-                  href="/sitemap"
+                  href="/legal/privacy"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Sitemap
+                  Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/feedback"
+                  href="/legal/security"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Feedback
+                  Data Security & Compliance
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/newsletter"
+                  href="/legal/terms"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Newsletter
+                  Terms of Service
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/support/help"
+                  href="/legal/disclaimer"
                   className="hover:text-[#280b57] transition-colors"
                 >
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/accessibility"
-                  className="hover:text-[#280b57] transition-colors"
-                >
-                  Accessibility
+                  Disclaimer
                 </Link>
               </li>
             </ul>
           </div>
+
         </div>
 
         {/* Contact Information */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16 pb-16 border-b border-gray-700">
-          <div>
-            <h4 className="font-bold text-lg mb-4 text-white">Headquarters</h4>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 lg:mb-16 pb-12 lg:pb-16 border-b border-gray-700">
+          <div className="text-center sm:text-left">
+            <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-white">Headquarters</h4>
             <p className="text-gray-400 text-sm leading-relaxed">
               Delhi NCR
               <br />
@@ -691,19 +616,19 @@ export default function Footer() {
                 href="https://www.ashentrix.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-gray-300"
+                className="text-white hover:text-gray-300 transition-colors"
               >
                 www.ashentrix.com
               </a>
             </p>
           </div>
-          <div>
-            <h4 className="font-bold text-lg mb-4 text-white">Contact</h4>
+          <div className="text-center sm:text-left">
+            <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-white">Contact</h4>
             <p className="text-gray-400 text-sm leading-relaxed">
               Email:{" "}
               <a
                 href="mailto:service@ashentrix.com"
-                className="text-white hover:text-gray-300"
+                className="text-white hover:text-gray-300 transition-colors break-all"
               >
                 service@ashentrix.com
               </a>
@@ -711,7 +636,7 @@ export default function Footer() {
               Phone:{" "}
               <a
                 href="tel:+919711179821"
-                className="text-white hover:text-gray-300"
+                className="text-white hover:text-gray-300 transition-colors"
               >
                 +91-971 117 9821
               </a>
@@ -721,14 +646,14 @@ export default function Footer() {
                 href="https://wa.me/919711179821"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-gray-300"
+                className="text-white hover:text-gray-300 transition-colors"
               >
                 +91-971 117 9821
               </a>
             </p>
           </div>
-          <div>
-            <h4 className="font-bold text-lg mb-4 text-white">
+          <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
+            <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-white">
               Business Hours
             </h4>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -742,32 +667,32 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-          <p>© 2025 Ashentrix. All rights reserved worldwide.</p>
-          <div className="flex flex-wrap gap-6 justify-center">
-            <Link href="#" className="hover:text-[#280b57] transition-colors">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 text-xs sm:text-sm text-gray-400">
+          <p className="text-center lg:text-left">© 2025 Ashentrix. All rights reserved worldwide.</p>
+          <div className="flex flex-wrap gap-3 sm:gap-4 lg:gap-6 justify-center lg:justify-end">
+            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
               Investors
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors">
+            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
               Partners
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors">
+            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
               Global Clients
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors">
+            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
               Legal
             </Link>
             <Link
               href="/privacy"
-              className="hover:text-[#280b57] transition-colors"
+              className="hover:text-[#280b57] transition-colors whitespace-nowrap"
             >
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors">
+            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
               Terms of Service
             </Link>
-            <Link href="#" className="hover:text-[#280b57] transition-colors">
-              (Sitemap)
+            <Link href="#" className="hover:text-[#280b57] transition-colors whitespace-nowrap">
+              Sitemap
             </Link>
           </div>
         </div>

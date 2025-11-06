@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+    <section
+      id="services"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
+    >
       <div className="text-center mb-12 lg:mb-16">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0F172A] mb-4 tracking-tight">
           Our Services
@@ -78,7 +81,7 @@ export default function ServicesSection() {
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image
-              src="/images/services/process.jpg"
+              src="/images/services/data.jpg"
               alt="Data Processing"
               width={300}
               height={200}
