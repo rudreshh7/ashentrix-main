@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="max-w-7xl mx-auto px-8 py-20">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-semibold text-[#0F172A] mb-4 tracking-tight">
+    <section id="services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <div className="text-center mb-12 lg:mb-16">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0F172A] mb-4 tracking-tight">
           Our Services
         </h2>
         <p className="text-lg text-[#475569] max-w-3xl mx-auto">
@@ -14,7 +14,7 @@ export default function ServicesSection() {
           enhance customer engagement, and create measurable long-term value.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         <div className="bg-white overflow-hidden border border-gray-300 hover:border-[#280b57] transition-all hover:shadow-sm">
           <div className="relative w-full h-40">
             <Image

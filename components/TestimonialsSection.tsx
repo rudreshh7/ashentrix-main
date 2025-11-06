@@ -59,19 +59,19 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-semibold text-gray-900 mb-4 tracking-tight">
+    <section className="bg-white py-12 sm:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 tracking-tight">
             Partnership Vision
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Ready to build the success stories of tomorrow with forward-thinking
             organizations
           </p>
         </div>
 
-        <div className="relative bg-[#F8FAFC] p-12 max-w-4xl mx-auto border border-gray-200">
+        <div className="relative bg-[#F8FAFC] p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto border border-gray-200">
           <div className="text-center">
             {/* Quote Icon */}
             <div className="mb-8">

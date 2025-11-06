@@ -30,11 +30,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-white text-gray-900 py-16">
-      <div className="max-w-6xl mx-auto px-8">
+    <section id="contact" className="bg-white text-gray-900 py-12 sm:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Get in Touch
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -42,14 +42,14 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* Left Side - Contact Info */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Contact Cards */}
-            <div className="bg-gray-50  border border-gray-300 p-8 hover:shadow-sm transition-all duration-300">
+            <div className="bg-gray-50 border border-gray-300 p-4 sm:p-6 lg:p-8 hover:shadow-sm transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
-                  <div className="w-12 h-12  bg-gray-900 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gray-900 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -82,10 +82,10 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-gray-50  border border-gray-300 p-8 hover:shadow-sm transition-all duration-300">
+            <div className="bg-gray-50 border border-gray-300 p-4 sm:p-6 lg:p-8 hover:shadow-sm transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
-                  <div className="w-12 h-12  bg-gray-900 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gray-900 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -120,10 +120,10 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-gray-50  border border-gray-300 p-8 hover:shadow-sm transition-all duration-300">
+            <div className="bg-gray-50 border border-gray-300 p-4 sm:p-6 lg:p-8 hover:shadow-sm transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
-                  <div className="w-12 h-12  bg-gray-900 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gray-900 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -179,9 +179,9 @@ export default function ContactSection() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gray-50  border border-gray-300 p-8 shadow-sm">
+          <div className="bg-gray-50 border border-gray-300 p-4 sm:p-6 lg:p-8 shadow-sm">
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-900 mb-1">
                     Full Name *

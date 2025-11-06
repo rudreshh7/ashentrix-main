@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -134,7 +135,7 @@ export default function Header() {
               </Link>
             </nav>
 
-            {/* Right Side Items */}
+            {/* Right Side Items - Desktop */}
             <div className="hidden lg:flex items-center gap-4">
               {/* Sign in */}
               <Link
@@ -196,31 +197,20 @@ export default function Header() {
                 </svg>
                 <span className="text-sm font-medium">IND</span>
               </div>
-
-              {/* Mobile Menu Button */}
-              <button
-                className="lg:hidden text-gray-300 hover:text-white transition-colors p-2"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d={
-                      isMobileMenuOpen
-                        ? "M6 18L18 6M6 6l12 12"
-                        : "M4 6h16M4 12h16M4 18h16"
-                    }
-                  />
-                </svg>
-              </button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden text-white hover:text-gray-300 transition-colors p-3 rounded-md hover:bg-gray-800 z-50 relative"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6 text-white" />
+              ) : (
+                <Menu className="w-6 h-6 text-white" />
+              )}
+            </button>
           </div>
         </div>
       </header>
@@ -623,146 +613,312 @@ export default function Header() {
         </div>
       )}
 
-      {/* Mobile Menu */}
+      {/* Full Screen Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#1a1625] border-b border-[#280b57]/30">
-          <div className="max-w-7xl mx-auto px-3 py-6">
-            <nav className="space-y-4">
+        <div className="fixed inset-0 z-50 lg:hidden">
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setIsMobileMenuOpen(false)} />
+          
+          {/* Menu Panel */}
+          <div className="relative h-full bg-gradient-to-b from-[#0a0a0a] via-[#1a1625] to-[#280b57] overflow-y-auto">
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-700">
+              <div className="flex items-center">
+                <Image
+                  src="/ashentrix.jpeg"
+                  alt="Ashentrix Solutions"
+                  width={140}
+                  height={45}
+                  className="h-10 w-auto"
+                />
+              </div>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-white hover:text-gray-300 p-2"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Navigation */}
+            <nav className="p-6 space-y-2">
+              {/* Home */}
               <Link
                 href="/"
-                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                className="block text-white text-lg font-medium py-4 px-4 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
 
-              {/* Mobile About Section */}
+              {/* About Section */}
               <div>
                 <button
-                  className="w-full flex items-center justify-between text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
-                  onClick={() =>
-                    setActiveDropdown(
-                      activeDropdown === "about" ? null : "about"
-                    )
-                  }
+                  className="w-full flex items-center justify-between text-white text-lg font-medium py-4 px-4 hover:bg-white/10 rounded-lg transition-colors"
+                  onClick={() => setActiveDropdown(activeDropdown === "about" ? null : "about")}
                 >
                   About
                   <svg
-                    className={`w-4 h-4 transform transition-transform ${
+                    className={`w-5 h-5 transform transition-transform ${
                       activeDropdown === "about" ? "rotate-180" : ""
                     }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 {activeDropdown === "about" && (
-                  <div className="ml-4 mt-2 space-y-2">
+                  <div className="ml-4 mt-2 space-y-1">
                     <Link
                       href="/about"
-                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       About Ashentrix
                     </Link>
                     <Link
-                      href="/about/vision-mission"
-                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Vision & Mission
-                    </Link>
-                    <Link
                       href="/leadership"
-                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Leadership
                     </Link>
                     <Link
-                      href="/about/awards"
-                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
+                      href="/about/vision-mission"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Awards & Recognition
-                    </Link>
-                    <Link
-                      href="/about/news-media"
-                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      News & Media
-                    </Link>
-                    <Link
-                      href="/about/investors-partners"
-                      className="block text-sm text-gray-400 hover:text-white transition-colors py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Investors & Partners
+                      Vision & Mission
                     </Link>
                   </div>
                 )}
               </div>
 
-              <Link
-                href="/industries"
-                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Industries
-              </Link>
-              <Link
-                href="/services"
-                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                href="/careers"
-                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Careers
-              </Link>
+              {/* Industries Section */}
+              <div>
+                <button
+                  className="w-full flex items-center justify-between text-white text-lg font-medium py-4 px-4 hover:bg-white/10 rounded-lg transition-colors"
+                  onClick={() => setActiveDropdown(activeDropdown === "industries" ? null : "industries")}
+                >
+                  Industries
+                  <svg
+                    className={`w-5 h-5 transform transition-transform ${
+                      activeDropdown === "industries" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {activeDropdown === "industries" && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    <Link
+                      href="/industries"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      All Industries
+                    </Link>
+                    <Link
+                      href="/industries/insurance"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Insurance
+                    </Link>
+                    <Link
+                      href="/industries/healthcare"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Healthcare
+                    </Link>
+                    <Link
+                      href="/industries/telecom"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Telecom
+                    </Link>
+                    <Link
+                      href="/industries/finance"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Banking & Finance
+                    </Link>
+                    <Link
+                      href="/industries/ecommerce"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      E-commerce & Retail
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Services Section */}
+              <div>
+                <button
+                  className="w-full flex items-center justify-between text-white text-lg font-medium py-4 px-4 hover:bg-white/10 rounded-lg transition-colors"
+                  onClick={() => setActiveDropdown(activeDropdown === "services" ? null : "services")}
+                >
+                  Services
+                  <svg
+                    className={`w-5 h-5 transform transition-transform ${
+                      activeDropdown === "services" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {activeDropdown === "services" && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    <Link
+                      href="/services"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      All Services
+                    </Link>
+                    <Link
+                      href="/services/customer-support"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Customer Support
+                    </Link>
+                    <Link
+                      href="/services/technical-support"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Technical Support
+                    </Link>
+                    <Link
+                      href="/services/back-office"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Back Office Operations
+                    </Link>
+                    <Link
+                      href="/services/data-processing"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Data Processing
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Careers Section */}
+              <div>
+                <button
+                  className="w-full flex items-center justify-between text-white text-lg font-medium py-4 px-4 hover:bg-white/10 rounded-lg transition-colors"
+                  onClick={() => setActiveDropdown(activeDropdown === "careers" ? null : "careers")}
+                >
+                  Careers
+                  <svg
+                    className={`w-5 h-5 transform transition-transform ${
+                      activeDropdown === "careers" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {activeDropdown === "careers" && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    <Link
+                      href="/careers"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Job Opportunities
+                    </Link>
+                    <Link
+                      href="/careers/culture"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Company Culture
+                    </Link>
+                    <Link
+                      href="/careers/apply"
+                      className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Apply Now
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Contact */}
               <Link
                 href="/contact"
-                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                className="block text-white text-lg font-medium py-4 px-4 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
               </Link>
+
+              {/* Divider */}
+              <div className="border-t border-gray-600 my-6"></div>
+
+              {/* Additional Links */}
               <Link
-                href="#"
-                className="block text-gray-300 hover:text-white transition-colors uppercase tracking-wide py-2"
+                href="/insights"
+                className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Sign in
+                Insights
               </Link>
+
+              {/* WhatsApp */}
               <Link
                 href="https://wa.me/918005818019"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors uppercase tracking-wide py-2"
+                className="flex items-center gap-3 text-green-400 text-base py-3 px-4 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.63" />
                 </svg>
-                WhatsApp
+                Connect on WhatsApp
+              </Link>
+
+              {/* Sign In */}
+              <Link
+                href="#"
+                className="block text-gray-300 text-base py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Sign In
               </Link>
             </nav>
+
+            {/* Footer */}
+            <div className="p-6 border-t border-gray-700 mt-8">
+              <p className="text-gray-400 text-sm text-center">
+                © 2025 Ashentrix Solutions. All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       )}

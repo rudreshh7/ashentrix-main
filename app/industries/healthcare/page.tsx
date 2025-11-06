@@ -4,27 +4,27 @@ export default function HealthcarePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#280b57] to-[#1a0a3e] text-white py-20">
-        <div className="max-w-7xl mx-auto px-8">
+      <section className="bg-gradient-to-br from-[#280b57] to-[#1a0a3e] text-white py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Healthcare Industry Solutions
             </h1>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-200 mb-8">
               HIPAA-compliant healthcare BPO services that improve patient care,
               reduce administrative burden, and enhance operational efficiency
               across healthcare organizations.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="bg-white text-[#280b57] px-8 py-3 font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-[#280b57] px-6 sm:px-8 py-3 font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Get Started
               </Link>
               <Link
                 href="/industries"
-                className="border-2 border-white text-white px-8 py-3 font-semibold hover:bg-white hover:text-[#280b57] transition-colors"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 font-semibold hover:bg-white hover:text-[#280b57] transition-colors text-center"
               >
                 All Industries
               </Link>
@@ -34,11 +34,11 @@ export default function HealthcarePage() {
       </section>
 
       {/* Industry Overview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Healthcare Excellence
               </h2>
               <p className="text-gray-600 mb-6">

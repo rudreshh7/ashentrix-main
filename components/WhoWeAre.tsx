@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function WhoWeAre() {
   return (
-    <section id="who-we-are" className="bg-white py-24">
-      <div className="max-w-7xl mx-auto px-12">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+    <section id="who-we-are" className="bg-white py-12 sm:py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-[#0F172A] mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] mb-6">
               Who We Are
             </h2>
-            <p className="text-lg text-[#475569] leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-[#475569] leading-relaxed mb-6">
               Ashentrix Solutions is a professional outsourcing and business
               process management company based in Delhi NCR, India. We
               specialize in providing end-to-end outsourcing services across
@@ -17,14 +17,14 @@ export default function WhoWeAre() {
               Entertainment, Social Platforms, Finance, Accounting, Recruitment,
               Logistics, Banking, Travel, and Hospitality.
             </p>
-            <p className="text-lg text-[#475569] leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-[#475569] leading-relaxed mb-6">
               We combine human expertise and smart technology to deliver
               reliable, flexible support for both domestic and international
               clients. With a focus on quality, innovation, and scalability, we
               help organizations streamline workflows and achieve operational
               excellence.
             </p>
-            <div className="grid grid-cols-3 gap-8 pt-6 border-t border-gray-200">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 pt-6 border-t border-gray-200">
               <div>
                 <div className="text-3xl font-bold text-[#280b57] mb-2">
                   New

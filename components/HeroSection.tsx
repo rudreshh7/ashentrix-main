@@ -11,10 +11,10 @@ export default function HeroSection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-7xl mx-auto px-8 py-20 w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 w-full">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Transforming Operations.
               <br />
               <span className="text-white">Empowering Growth.</span>
@@ -25,16 +25,16 @@ export default function HeroSection() {
               Telecom, Healthcare, Finance, and more with end-to-end customer
               support and back-office operations.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contact"
-                className="bg-[#280b57] text-white px-10 py-4 font-semibold hover:bg-[#1f0944] transition-colors inline-block tracking-tight"
+                className="bg-[#280b57] text-white px-8 sm:px-10 py-4 font-semibold hover:bg-[#1f0944] transition-colors inline-block tracking-tight text-center"
               >
                 Get Started
               </a>
               <a
                 href="#services"
-                className="border-2 border-white text-white px-10 py-4 font-semibold hover:bg-white hover:text-[#280b57] transition-colors inline-block tracking-tight"
+                className="border-2 border-white text-white px-8 sm:px-10 py-4 font-semibold hover:bg-white hover:text-[#280b57] transition-colors inline-block tracking-tight text-center"
               >
                 Explore Services
               </a>

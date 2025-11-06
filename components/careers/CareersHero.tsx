@@ -1,16 +1,16 @@
 export default function CareersHero() {
   return (
-    <section className="relative bg-linear-to-br from-[#0a0a0a] via-[#1a1625] to-[#280b57] text-white py-32">
+    <section className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1625] to-[#280b57] text-white py-16 sm:py-24 lg:py-32">
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
-      <div className="relative max-w-7xl mx-auto px-8 text-center">
-        <div className="mb-8">
-          <span className="inline-block px-4 py-2 bg-[#280b57]/20 text-[#ffffff] text-sm font-semibold rounded-full border border-[#280b57]/30 mb-6 uppercase tracking-wider">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mb-6 sm:mb-8">
+          <span className="inline-block px-3 sm:px-4 py-2 bg-[#280b57]/20 text-[#ffffff] text-xs sm:text-sm font-semibold rounded-full border border-[#280b57]/30 mb-4 sm:mb-6 uppercase tracking-wider">
             Join Our Team
           </span>
         </div>
-        <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
           Shape the Future
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-[#280b57] to-purple-400 block">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#280b57] to-purple-400 block">
             With Purpose
           </span>
         </h1>

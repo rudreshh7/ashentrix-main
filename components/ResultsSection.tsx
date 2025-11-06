@@ -198,18 +198,18 @@ export default function ResultsSection() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
-          <div className="text-center mb-20">
-            <div className="inline-block mb-6">
-              <span className="text-sm font-bold text-[#280b57] uppercase tracking-wider bg-[#280b57]/20 px-4 py-2  border border-[#280b57]/30">
+          <div className="text-center mb-12 lg:mb-20">
+            <div className="inline-block mb-4 sm:mb-6">
+              <span className="text-xs sm:text-sm font-bold text-[#280b57] uppercase tracking-wider bg-[#280b57]/20 px-3 sm:px-4 py-2 border border-[#280b57]/30">
                 Impact That Matters
               </span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
               Proven Results, Measurable Impact
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Real transformations delivered to industry leaders across the
               globe. Our data-driven approach consistently delivers exceptional
               outcomes.
@@ -217,7 +217,7 @@ export default function ResultsSection() {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
             {stats.map((stat, index) => (
               <StatCard key={index} {...stat} index={index} />
             ))}

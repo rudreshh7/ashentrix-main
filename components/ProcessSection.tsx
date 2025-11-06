@@ -123,17 +123,17 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="bg-gradient-to-br from-gray-50 to-white py-24"
+      className="bg-gradient-to-br from-gray-50 to-white py-12 sm:py-16 lg:py-24"
     >
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 lg:mb-20">
           <div className="inline-block mb-4">
-            <span className="text-sm font-bold text-[#280b57] uppercase tracking-wider bg-[#280b57]/10 px-4 py-2">
+            <span className="text-xs sm:text-sm font-bold text-[#280b57] uppercase tracking-wider bg-[#280b57]/10 px-3 sm:px-4 py-2">
               Our Process
             </span>
           </div>
-          <h2 className="text-4xl font-bold text-[#0F172A] mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] mb-6">
             How We Drive Your Success
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -143,7 +143,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Process Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 relative">
           {/* Connection Lines - Desktop */}
           <div
             className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-[#280b57] via-[#280b57] to-[#280b57] opacity-20"
@@ -158,7 +158,7 @@ export default function ProcessSection() {
               onMouseLeave={() => setActiveStep(null)}
             >
               <div
-                className={`bg-white p-10 shadow-sm border-2 transition-all duration-300 h-full ${
+                className={`bg-white p-4 sm:p-6 lg:p-10 shadow-sm border-2 transition-all duration-300 h-full ${
                   activeStep === index
                     ? "border-[#280b57] shadow-md transform -translate-y-1"
                     : "border-gray-200 hover:border-[#280b57]/50"

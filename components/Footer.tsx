@@ -691,7 +691,7 @@ export default function Footer() {
                 href="https://www.ashentrix.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#280b57] hover:text-[#280b57]"
+                className="text-white hover:text-gray-300"
               >
                 www.ashentrix.com
               </a>
@@ -736,7 +736,7 @@ export default function Footer() {
               <br />
               Sat & Sun: Closed
               <br />
-              <span className="text-[#280b57]">24/7 Support Available</span>
+              <span className="text-white">24/7 Support Available</span>
             </p>
           </div>
         </div>
