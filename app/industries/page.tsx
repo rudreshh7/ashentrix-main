@@ -7,18 +7,23 @@ import TechSaaS from "@/components/industries/TechSaaS";
 import RetailEcommerce from "@/components/industries/RetailEcommerce";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve - Banking, Healthcare, Insurance & More | Ashentrix",
-  description: "Specialized BPO services for Banking, Insurance, Healthcare, Telecom, E-commerce, IT & Travel industries. Expert outsourcing solutions tailored for diverse business sectors.",
-  keywords: "banking BPO services, insurance outsourcing, healthcare BPO, telecom outsourcing, ecommerce support services, IT outsourcing, travel hospitality BPO, industry specific outsourcing",
+  title:
+    "Industries We Serve - Banking, Healthcare, Insurance & More | Ashentrix",
+  description:
+    "Specialized BPO services for Banking, Insurance, Healthcare, Telecom, E-commerce, IT & Travel industries. Expert outsourcing solutions tailored for diverse business sectors.",
+  keywords:
+    "banking BPO services, insurance outsourcing, healthcare BPO, telecom outsourcing, ecommerce support services, IT outsourcing, travel hospitality BPO, industry specific outsourcing",
   openGraph: {
-    title: "Industries We Serve - Banking, Healthcare, Insurance & More | Ashentrix",
-    description: "Specialized BPO services for Banking, Insurance, Healthcare, Telecom, E-commerce & IT industries. Tailored outsourcing solutions.",
+    title:
+      "Industries We Serve - Banking, Healthcare, Insurance & More | Ashentrix",
+    description:
+      "Specialized BPO services for Banking, Insurance, Healthcare, Telecom, E-commerce & IT industries. Tailored outsourcing solutions.",
     url: "https://www.ashentrix.com/industries",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.ashentrix.com/industries"
-  }
+    canonical: "https://www.ashentrix.com/industries",
+  },
 };
 
 export default function IndustriesPage() {

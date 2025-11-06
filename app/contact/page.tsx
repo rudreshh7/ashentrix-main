@@ -9,17 +9,20 @@ import ContactInfo from "@/components/contact/ContactInfo";
 
 export const metadata: Metadata = {
   title: "Contact Us - Get BPO Quote & Outsourcing Solutions | Ashentrix",
-  description: "Contact Ashentrix Solutions for professional BPO services. Get quotes for customer support, technical support & back office operations. Delhi NCR office. Call +91-971-117-9821",
-  keywords: "contact ashentrix, BPO quote, outsourcing quote, customer support quote, technical support services contact, Delhi NCR BPO company contact",
+  description:
+    "Contact Ashentrix Solutions for professional BPO services. Get quotes for customer support, technical support & back office operations. Delhi NCR office. Call +91-971-117-9821",
+  keywords:
+    "contact ashentrix, BPO quote, outsourcing quote, customer support quote, technical support services contact, Delhi NCR BPO company contact",
   openGraph: {
     title: "Contact Us - Get BPO Quote & Outsourcing Solutions | Ashentrix",
-    description: "Contact Ashentrix Solutions for professional BPO services. Get quotes for outsourcing solutions. Delhi NCR office.",
+    description:
+      "Contact Ashentrix Solutions for professional BPO services. Get quotes for outsourcing solutions. Delhi NCR office.",
     url: "https://www.ashentrix.com/contact",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.ashentrix.com/contact"
-  }
+    canonical: "https://www.ashentrix.com/contact",
+  },
 };
 
 export default function ContactPage() {

@@ -22,7 +22,7 @@ export default function SimpleContactTest() {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData
+        body: formData,
       });
 
       const data = await response.json();
@@ -57,7 +57,7 @@ export default function SimpleContactTest() {
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Email *
@@ -69,7 +69,7 @@ export default function SimpleContactTest() {
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Message *
@@ -81,25 +81,27 @@ export default function SimpleContactTest() {
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
           />
         </div>
-        
+
         <button
           type="submit"
           disabled={isSubmitting}
           className={`w-full py-2 px-4 rounded font-medium ${
             isSubmitting
-              ? 'bg-gray-400 cursor-not-allowed text-white'
-              : 'bg-blue-600 hover:bg-blue-700 text-white'
+              ? "bg-gray-400 cursor-not-allowed text-white"
+              : "bg-blue-600 hover:bg-blue-700 text-white"
           }`}
         >
           {isSubmitting ? "Sending..." : "Send Test"}
         </button>
-        
+
         {result && (
-          <div className={`p-3 rounded ${
-            result.includes('✅')
-              ? 'bg-green-100 text-green-800'
-              : 'bg-red-100 text-red-800'
-          }`}>
+          <div
+            className={`p-3 rounded ${
+              result.includes("✅")
+                ? "bg-green-100 text-green-800"
+                : "bg-red-100 text-red-800"
+            }`}
+          >
             {result}
           </div>
         )}

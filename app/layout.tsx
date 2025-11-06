@@ -13,10 +13,11 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.ashentrix.com'),
+  metadataBase: new URL("https://www.ashentrix.com"),
   title: {
-    default: "Ashentrix Solutions - Professional Outsourcing & Business Process Management",
-    template: "%s | Ashentrix Solutions"
+    default:
+      "Ashentrix Solutions - Professional Outsourcing & Business Process Management",
+    template: "%s | Ashentrix Solutions",
   },
   description:
     "Leading outsourcing company in Delhi NCR, India. Expert BPO services including customer support, technical support, back office operations, data processing & analytics for Insurance, Banking, Healthcare, Telecom & E-commerce industries.",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     "Telecom outsourcing",
     "E-commerce support",
     "multilingual support",
-    "24/7 customer service"
+    "24/7 customer service",
   ],
   authors: [{ name: "Ashentrix Solutions" }],
   creator: "Ashentrix Solutions",
@@ -47,27 +48,29 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://www.ashentrix.com',
-    title: 'Ashentrix Solutions - Professional Outsourcing & BPO Services',
-    description: 'Leading outsourcing company in Delhi NCR, India. Expert BPO services for Insurance, Banking, Healthcare, Telecom & E-commerce industries.',
-    siteName: 'Ashentrix Solutions',
+    type: "website",
+    locale: "en_US",
+    url: "https://www.ashentrix.com",
+    title: "Ashentrix Solutions - Professional Outsourcing & BPO Services",
+    description:
+      "Leading outsourcing company in Delhi NCR, India. Expert BPO services for Insurance, Banking, Healthcare, Telecom & E-commerce industries.",
+    siteName: "Ashentrix Solutions",
     images: [
       {
-        url: '/images/ashentrix-og-image.jpg',
+        url: "/images/ashentrix-og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Ashentrix Solutions - Professional Outsourcing Services',
+        alt: "Ashentrix Solutions - Professional Outsourcing Services",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Ashentrix Solutions - Professional Outsourcing & BPO Services',
-    description: 'Leading outsourcing company in Delhi NCR, India. Expert BPO services for multiple industries.',
-    images: ['/images/ashentrix-twitter-image.jpg'],
-    creator: '@ashentrix',
+    card: "summary_large_image",
+    title: "Ashentrix Solutions - Professional Outsourcing & BPO Services",
+    description:
+      "Leading outsourcing company in Delhi NCR, India. Expert BPO services for multiple industries.",
+    images: ["/images/ashentrix-twitter-image.jpg"],
+    creator: "@ashentrix",
   },
   robots: {
     index: true,
@@ -75,17 +78,17 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    yahoo: "your-yahoo-verification-code",
   },
-  category: 'Business Services',
+  category: "Business Services",
 };
 
 export default function RootLayout({
@@ -98,7 +101,11 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href="https://www.ashentrix.com" />
         <link rel="alternate" hrefLang="en" href="https://www.ashentrix.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.ashentrix.com" />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://www.ashentrix.com"
+        />
         <meta name="geo.region" content="IN-DL" />
         <meta name="geo.placename" content="Delhi NCR" />
         <meta name="geo.position" content="28.5355;77.3910" />
@@ -110,7 +117,7 @@ export default function RootLayout({
       </head>
       <body className={`${ibmPlexSans.variable} font-sans antialiased`}>
         <div id="google_translate_element"></div>
-        
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -118,77 +125,87 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Ashentrix Solutions",
-              "alternateName": "Ashentrix",
-              "url": "https://www.ashentrix.com",
-              "logo": "https://www.ashentrix.com/images/logo.png",
-              "description": "Leading outsourcing company providing BPO services including customer support, technical support, back office operations for Insurance, Banking, Healthcare, Telecom industries.",
-              "foundingDate": "2020",
-              "address": {
+              name: "Ashentrix Solutions",
+              alternateName: "Ashentrix",
+              url: "https://www.ashentrix.com",
+              logo: "https://www.ashentrix.com/images/logo.png",
+              description:
+                "Leading outsourcing company providing BPO services including customer support, technical support, back office operations for Insurance, Banking, Healthcare, Telecom industries.",
+              foundingDate: "2020",
+              address: {
                 "@type": "PostalAddress",
-                "streetAddress": "Delhi NCR",
-                "addressLocality": "Noida",
-                "addressRegion": "Uttar Pradesh",
-                "postalCode": "201301",
-                "addressCountry": "IN"
+                streetAddress: "Delhi NCR",
+                addressLocality: "Noida",
+                addressRegion: "Uttar Pradesh",
+                postalCode: "201301",
+                addressCountry: "IN",
               },
-              "contactPoint": {
+              contactPoint: {
                 "@type": "ContactPoint",
-                "telephone": "+91-971-117-9821",
-                "contactType": "customer service",
-                "availableLanguage": ["English", "Hindi"],
-                "hoursAvailable": {
+                telephone: "+91-971-117-9821",
+                contactType: "customer service",
+                availableLanguage: ["English", "Hindi"],
+                hoursAvailable: {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "10:00",
-                  "closes": "18:00"
-                }
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "10:00",
+                  closes: "18:00",
+                },
               },
-              "sameAs": [
+              sameAs: [
                 "https://www.linkedin.com/company/ashentrix",
                 "https://twitter.com/ashentrix",
-                "https://www.facebook.com/ashentrix"
+                "https://www.facebook.com/ashentrix",
               ],
-              "serviceArea": {
+              serviceArea: {
                 "@type": "GeoCircle",
-                "geoMidpoint": {
+                geoMidpoint: {
                   "@type": "GeoCoordinates",
-                  "latitude": "28.5355",
-                  "longitude": "77.3910"
+                  latitude: "28.5355",
+                  longitude: "77.3910",
                 },
-                "geoRadius": "50000"
+                geoRadius: "50000",
               },
-              "hasOfferCatalog": {
+              hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                "name": "Outsourcing Services",
-                "itemListElement": [
+                name: "Outsourcing Services",
+                itemListElement: [
                   {
                     "@type": "Offer",
-                    "itemOffered": {
+                    itemOffered: {
                       "@type": "Service",
-                      "name": "Customer Support Services",
-                      "description": "24/7 multilingual customer support via voice, chat, and email"
-                    }
+                      name: "Customer Support Services",
+                      description:
+                        "24/7 multilingual customer support via voice, chat, and email",
+                    },
                   },
                   {
                     "@type": "Offer",
-                    "itemOffered": {
+                    itemOffered: {
                       "@type": "Service",
-                      "name": "Technical Support Services",
-                      "description": "End-to-end technical troubleshooting and product support"
-                    }
+                      name: "Technical Support Services",
+                      description:
+                        "End-to-end technical troubleshooting and product support",
+                    },
                   },
                   {
                     "@type": "Offer",
-                    "itemOffered": {
+                    itemOffered: {
                       "@type": "Service",
-                      "name": "Back Office Operations",
-                      "description": "Streamlined processing and documentation services"
-                    }
-                  }
-                ]
-              }
-            })
+                      name: "Back Office Operations",
+                      description:
+                        "Streamlined processing and documentation services",
+                    },
+                  },
+                ],
+              },
+            }),
           }}
         />
 
@@ -278,7 +295,7 @@ export default function RootLayout({
           <img
             height="1"
             width="1"
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
             alt=""
           />

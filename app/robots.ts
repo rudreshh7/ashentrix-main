@@ -1,19 +1,19 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/private/', '/admin/', '/_next/', '/api/'],
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/private/", "/admin/", "/_next/", "/api/"],
       },
       {
-        userAgent: 'Googlebot',
-        allow: ['/'],
-        disallow: ['/private/', '/admin/'],
+        userAgent: "Googlebot",
+        allow: ["/"],
+        disallow: ["/private/", "/admin/"],
       },
     ],
-    sitemap: 'https://www.ashentrix.com/sitemap.xml',
-  }
+    sitemap: "https://www.ashentrix.com/sitemap.xml",
+  };
 }

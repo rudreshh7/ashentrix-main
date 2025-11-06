@@ -8,18 +8,23 @@ import ServiceProcess from "@/components/services/ServiceProcess";
 import ServiceBenefits from "@/components/services/ServiceBenefits";
 
 export const metadata: Metadata = {
-  title: "BPO Services - Customer Support, Technical Support & More | Ashentrix",
-  description: "Comprehensive BPO services including 24/7 customer support, technical support, back office operations, data processing, analytics & reporting. Expert outsourcing solutions for global businesses.",
-  keywords: "BPO services, customer support outsourcing, technical support services, back office operations, data processing services, call center services, business process outsourcing, multilingual support, 24/7 customer service",
+  title:
+    "BPO Services - Customer Support, Technical Support & More | Ashentrix",
+  description:
+    "Comprehensive BPO services including 24/7 customer support, technical support, back office operations, data processing, analytics & reporting. Expert outsourcing solutions for global businesses.",
+  keywords:
+    "BPO services, customer support outsourcing, technical support services, back office operations, data processing services, call center services, business process outsourcing, multilingual support, 24/7 customer service",
   openGraph: {
-    title: "BPO Services - Customer Support, Technical Support & More | Ashentrix",
-    description: "Comprehensive BPO services including customer support, technical support, back office operations & data processing for global businesses.",
+    title:
+      "BPO Services - Customer Support, Technical Support & More | Ashentrix",
+    description:
+      "Comprehensive BPO services including customer support, technical support, back office operations & data processing for global businesses.",
     url: "https://www.ashentrix.com/services",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.ashentrix.com/services"
-  }
+    canonical: "https://www.ashentrix.com/services",
+  },
 };
 
 export default function ServicesPage() {

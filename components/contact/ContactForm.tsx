@@ -13,12 +13,15 @@ export default function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     // Add the Web3Forms access key
     formData.append("access_key", "8d5a9af8-325d-4da9-9ccb-5bb326b436d6");
-    
+
     // Add additional metadata for Web3Forms
-    formData.append("subject", "New Contact Form Submission - Ashentrix Solutions");
+    formData.append(
+      "subject",
+      "New Contact Form Submission - Ashentrix Solutions"
+    );
     formData.append("cc", "service@ashentrix.com");
 
     console.log("FormData contents:");
@@ -29,22 +32,31 @@ export default function ContactForm() {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData
+        body: formData,
       });
 
       const data = await response.json();
       console.log("Response from Web3Forms:", data);
 
       if (data.success) {
-        setResult("✅ Message sent successfully! We'll get back to you within 24 hours.");
+        setResult(
+          "✅ Message sent successfully! We'll get back to you within 24 hours."
+        );
         form.reset();
       } else {
         console.error("Web3Forms error:", data);
-        setResult(`❌ Error: ${data.message || 'Something went wrong. Please try again or contact us directly.'}`);
+        setResult(
+          `❌ Error: ${
+            data.message ||
+            "Something went wrong. Please try again or contact us directly."
+          }`
+        );
       }
     } catch (error) {
       console.error("Network error:", error);
-      setResult("❌ Network error. Please check your connection and try again.");
+      setResult(
+        "❌ Network error. Please check your connection and try again."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -135,13 +147,19 @@ export default function ContactForm() {
                   className="w-full p-3 border border-gray-300 focus:outline-none focus:border-[#280b57] transition-colors"
                 >
                   <option value="">Select a service</option>
-                  <option value="customer-support">Customer Support (Voice/Chat/Email)</option>
+                  <option value="customer-support">
+                    Customer Support (Voice/Chat/Email)
+                  </option>
                   <option value="technical-support">Technical Support</option>
                   <option value="back-office">Back Office Operations</option>
-                  <option value="data-processing">Data Processing & Data Services</option>
+                  <option value="data-processing">
+                    Data Processing & Data Services
+                  </option>
                   <option value="analytics">Analytics & Reporting</option>
                   <option value="collections">Collections Process</option>
-                  <option value="recruitment">Recruitment & Talent Support</option>
+                  <option value="recruitment">
+                    Recruitment & Talent Support
+                  </option>
                   <option value="operations">Operations Management</option>
                   <option value="other">Other Services</option>
                 </select>
@@ -164,21 +182,23 @@ export default function ContactForm() {
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full py-3 px-6 font-semibold transition-colors ${
-                  isSubmitting 
-                    ? 'bg-gray-400 cursor-not-allowed text-white' 
-                    : 'bg-[#280b57] text-white hover:bg-[#280b57]/90'
+                  isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed text-white"
+                    : "bg-[#280b57] text-white hover:bg-[#280b57]/90"
                 }`}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
 
               {/* Display result message */}
               {result && (
-                <div className={`mt-4 p-4 rounded-lg ${
-                  result.includes('✅') 
-                    ? 'bg-green-50 text-green-800 border border-green-200' 
-                    : 'bg-red-50 text-red-800 border border-red-200'
-                }`}>
+                <div
+                  className={`mt-4 p-4 rounded-lg ${
+                    result.includes("✅")
+                      ? "bg-green-50 text-green-800 border border-green-200"
+                      : "bg-red-50 text-red-800 border border-red-200"
+                  }`}
+                >
                   {result}
                 </div>
               )}
@@ -205,12 +225,20 @@ export default function ContactForm() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Phone</h4>
                   <p className="text-gray-600">
-                    <a href="tel:+919711179821" className="hover:text-[#280b57] transition-colors">
+                    <a
+                      href="tel:+919711179821"
+                      className="hover:text-[#280b57] transition-colors"
+                    >
                       +91-971 117 9821
                     </a>
                   </p>
                   <p className="text-gray-600">
-                    <a href="https://wa.me/919711179821" target="_blank" rel="noopener noreferrer" className="hover:text-[#280b57] transition-colors">
+                    <a
+                      href="https://wa.me/919711179821"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#280b57] transition-colors"
+                    >
                       WhatsApp: +91-971 117 9821
                     </a>
                   </p>
@@ -231,7 +259,10 @@ export default function ContactForm() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Email</h4>
                   <p className="text-gray-600">
-                    <a href="mailto:service@ashentrix.com" className="hover:text-[#280b57] transition-colors">
+                    <a
+                      href="mailto:service@ashentrix.com"
+                      className="hover:text-[#280b57] transition-colors"
+                    >
                       service@ashentrix.com
                     </a>
                   </p>

@@ -18,11 +18,14 @@ import SEOAudit from "@/components/SEO/SEOAudit";
 
 export const metadata: Metadata = {
   title: "Professional Outsourcing Services | BPO Company Delhi NCR India",
-  description: "Ashentrix Solutions - Leading BPO company in Delhi NCR offering customer support, technical support, back office operations, data processing services for Insurance, Banking, Healthcare, Telecom industries. 24/7 multilingual support.",
-  keywords: "outsourcing services Delhi, BPO company India, customer support outsourcing, technical support services, business process outsourcing, call center services NCR, multilingual support services",
+  description:
+    "Ashentrix Solutions - Leading BPO company in Delhi NCR offering customer support, technical support, back office operations, data processing services for Insurance, Banking, Healthcare, Telecom industries. 24/7 multilingual support.",
+  keywords:
+    "outsourcing services Delhi, BPO company India, customer support outsourcing, technical support services, business process outsourcing, call center services NCR, multilingual support services",
   openGraph: {
     title: "Professional Outsourcing Services | BPO Company Delhi NCR India",
-    description: "Leading BPO company offering comprehensive outsourcing solutions. Customer support, technical support, back office operations for multiple industries.",
+    description:
+      "Leading BPO company offering comprehensive outsourcing solutions. Customer support, technical support, back office operations for multiple industries.",
     url: "https://www.ashentrix.com",
     type: "website",
     images: [
@@ -30,13 +33,13 @@ export const metadata: Metadata = {
         url: "/images/ashentrix-homepage-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Ashentrix Solutions - Professional Outsourcing Services"
-      }
-    ]
+        alt: "Ashentrix Solutions - Professional Outsourcing Services",
+      },
+    ],
   },
   alternates: {
-    canonical: "https://www.ashentrix.com"
-  }
+    canonical: "https://www.ashentrix.com",
+  },
 };
 
 export default function Home() {

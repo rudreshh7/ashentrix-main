@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Thank You - Contact Form Submitted | Ashentrix Solutions",
-  description: "Thank you for contacting Ashentrix Solutions. We have received your message and will get back to you within 24 hours.",
+  description:
+    "Thank you for contacting Ashentrix Solutions. We have received your message and will get back to you within 24 hours.",
   robots: {
     index: false,
     follow: false,
@@ -30,17 +31,20 @@ export default function ThankYouPage() {
               />
             </svg>
           </div>
-          
+
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
             Thank You for Contacting Us!
           </h1>
-          
+
           <p className="text-lg text-gray-600 mb-6">
-            We have received your message and our team will get back to you within 24 hours during business days.
+            We have received your message and our team will get back to you
+            within 24 hours during business days.
           </p>
-          
+
           <div className="bg-[#280b57]/5 rounded-lg p-6 mb-6">
-            <h2 className="font-semibold text-gray-900 mb-3">What happens next?</h2>
+            <h2 className="font-semibold text-gray-900 mb-3">
+              What happens next?
+            </h2>
             <ul className="text-left space-y-2 text-gray-600">
               <li className="flex items-start gap-2">
                 <span className="text-[#280b57] font-bold">1.</span>
@@ -56,7 +60,7 @@ export default function ThankYouPage() {
               </li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <Link
               href="/"
@@ -64,7 +68,7 @@ export default function ThankYouPage() {
             >
               Return to Homepage
             </Link>
-            
+
             <div className="text-sm text-gray-500">
               <p>Need immediate assistance?</p>
               <p>
