@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AnalyticsReportingPage() {
   return (
@@ -6,26 +7,41 @@ export default function AnalyticsReportingPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#280b57] to-[#1a0a3e] text-white py-20">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">Analytics & Reporting</h1>
-            <p className="text-xl text-gray-200 mb-8">
-              Transform your business data into actionable insights with
-              comprehensive analytics and reporting solutions that drive
-              informed decision-making and strategic growth.
-            </p>
-            <div className="flex gap-4">
-              <Link
-                href="/contact"
-                className="bg-white text-[#280b57] px-8 py-3 font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-3 font-semibold hover:bg-white hover:text-[#280b57] transition-colors"
-              >
-                All Services
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+                Analytics & Reporting
+              </h1>
+              <p className="text-xl text-gray-200 mb-8">
+                Actionable insights through real-time data monitoring and
+                performance analysis. Transform your business data into
+                strategic intelligence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="bg-white text-[#280b57] px-8 py-3 font-semibold hover:bg-gray-100 transition-colors text-center rounded-lg"
+                >
+                  Get Started
+                </Link>
+                <Link
+                  href="/services"
+                  className="border-2 border-white text-white px-8 py-3 font-semibold hover:bg-white hover:text-[#280b57] transition-colors text-center rounded-lg"
+                >
+                  All Services
+                </Link>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative h-80 lg:h-96 w-full rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/services/reporting.jpg"
+                  alt="Analytics & Reporting Dashboard"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>

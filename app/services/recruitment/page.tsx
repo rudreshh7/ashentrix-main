@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function RecruitmentPage() {
   return (
@@ -6,26 +7,41 @@ export default function RecruitmentPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#280b57] to-[#1a0a3e] text-white py-20">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">Recruitment Services</h1>
-            <p className="text-xl text-gray-200 mb-8">
-              Strategic talent acquisition and recruitment solutions to help you
-              find, attract, and hire the best candidates for your
-              organization's success.
-            </p>
-            <div className="flex gap-4">
-              <Link
-                href="/contact"
-                className="bg-white text-[#280b57] px-8 py-3 font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-3 font-semibold hover:bg-white hover:text-[#280b57] transition-colors"
-              >
-                All Services
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+                Recruitment & Talent Support
+              </h1>
+              <p className="text-xl text-gray-200 mb-8">
+                Scalable hiring solutions to meet your workforce and project
+                demands. Comprehensive talent acquisition and management
+                services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="bg-white text-[#280b57] px-8 py-3 font-semibold hover:bg-gray-100 transition-colors text-center rounded-lg"
+                >
+                  Get Started
+                </Link>
+                <Link
+                  href="/services"
+                  className="border-2 border-white text-white px-8 py-3 font-semibold hover:bg-white hover:text-[#280b57] transition-colors text-center rounded-lg"
+                >
+                  All Services
+                </Link>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative h-80 lg:h-96 w-full rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/services/talentsupport.jpg"
+                  alt="Recruitment & Talent Support Team"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
