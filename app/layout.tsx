@@ -18,9 +18,18 @@ export const metadata: Metadata = {
   },
   description:
     "Leading BPO company in Delhi NCR offering customer support, technical support, back office operations & data processing services for global businesses.",
+  icons: {
+    icon: [
+      { url: "/ashentrix.jpeg", type: "image/jpeg" },
+      { url: "/ashentrix.jpeg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/ashentrix.jpeg", sizes: "16x16", type: "image/jpeg" },
+    ],
+    shortcut: "/ashentrix.jpeg",
+    apple: "/ashentrix.jpeg",
+  },
   openGraph: {
     type: "website",
-    locale: "en_US", 
+    locale: "en_US",
     siteName: "Ashentrix Solutions",
     images: [
       {
@@ -59,20 +68,19 @@ export default function RootLayout({
               name: "Ashentrix Solutions",
               url: "https://www.ashentrix.com",
               logo: "https://www.ashentrix.com/images/logo.png",
-              description: "Leading BPO company providing outsourcing services for global businesses.",
+              description:
+                "Leading BPO company providing outsourcing services for global businesses.",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Delhi NCR",
-                addressCountry: "IN"
+                addressCountry: "IN",
               },
               contactPoint: {
-                "@type": "ContactPoint", 
+                "@type": "ContactPoint",
                 telephone: "+91-971-117-9821",
-                contactType: "customer service"
+                contactType: "customer service",
               },
-              sameAs: [
-                "https://www.linkedin.com/company/ashentrix"
-              ]
+              sameAs: ["https://www.linkedin.com/company/ashentrix"],
             }),
           }}
         />
