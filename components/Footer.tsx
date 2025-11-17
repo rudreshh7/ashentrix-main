@@ -550,12 +550,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Legal */}
+          {/* Contact */}
           <div className="mb-8 sm:mb-0">
             <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
               Contact
             </h4>
-            <ul className="space-y-3 text-sm text-gray-400 mb-6 sm:mb-8">
+            <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <Link
                   href="/contact"
@@ -581,7 +581,10 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
 
+          {/* Legal */}
+          <div className="mb-8 sm:mb-0">
             <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-white">
               Legal
             </h4>
@@ -646,7 +649,7 @@ export default function Footer() {
           </div>
           <div className="text-center sm:text-left">
             <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-white">
-              Contact
+              Reach us
             </h4>
             <p className="text-gray-400 text-sm leading-relaxed">
               Email:{" "}
