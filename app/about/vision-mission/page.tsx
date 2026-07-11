@@ -1,11 +1,6 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
 export default function VisionMissionPage() {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      <Header />
-
       {/* Vision & Mission Hero */}
       <section className="bg-gradient-to-br from-[#1a1625] to-[#280b57] py-24">
         <div className="max-w-7xl mx-auto px-8">
@@ -283,7 +278,6 @@ export default function VisionMissionPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

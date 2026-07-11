@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import AboutHero from "@/components/about/AboutHero";
 import AboutMission from "@/components/about/AboutMission";
 import AboutValues from "@/components/about/AboutValues";
@@ -24,13 +22,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      <Header />
       <AboutHero />
       <AboutMission />
       <AboutValues />
       <AboutHistory />
       <AboutTeam />
-      <Footer />
     </div>
   );
 }

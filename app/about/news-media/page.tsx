@@ -1,11 +1,6 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
 export default function NewsMediaPage() {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      <Header />
-
       {/* News & Media Hero */}
       <section className="bg-linear-to-br from-[#1a1625] to-[#280b57] py-24">
         <div className="max-w-7xl mx-auto px-8">
@@ -281,7 +276,6 @@ export default function NewsMediaPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
